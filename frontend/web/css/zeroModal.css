@@ -50,7 +50,6 @@
     margin-bottom: 18px;
     color: #666;
     font-size: 20px;
-    /*position: relative;*/
 }
 
 .zeromodal-progress-content {
@@ -153,16 +152,14 @@
 }
 
 .zeromodal-close {
-    position: absolute;
+    position: relative;
     -webkit-appearance: none;
     padding: 0;
     cursor: pointer;
+    background: 0 0;
     border: 0;
-    top: 24px;
-    width: 24px;
-    height: 24px;
-    right: 24px;
-   /* outline: none;
+    top: -6px;
+    outline: none;
     float: right;
     font-size: 21px;
     font-weight: 700;
@@ -178,19 +175,16 @@
     -o-transition: -o-transform 0.4s ease-out;
     -ms-transition: -ms-transform 0.4s ease-out;
     -moz-user-select: none;
-    -webkit-user-select: none;*/
-    text-indent: -9999px;
-    background-image: url("../images/set/closed_pop.png");
-    background-repeat: no-repeat;
+    -webkit-user-select: none;
 }
 
-/*.zeromodal-close:hover {
+.zeromodal-close:hover {
     -webkit-transform: rotateZ(180deg);
     -moz-transform: rotateZ(180deg);
     -o-transform: rotateZ(180deg);
     -ms-transform: rotateZ(180deg);
     transform: rotateZ(180deg);
-}*/
+}
 
 .zeromodal-footer {
     position: absolute;

@@ -295,7 +295,7 @@ $this->title = '概览';
     .height_color {
         display: inline-block;
         background: #FF5F5C;
-        margin-left: 6px;
+        margin-left: 10px;
         width: 16px;
         border-radius: 2px;
         height: 10px;
@@ -409,22 +409,10 @@ $this->title = '概览';
     .item_low{
         background-color:#7ACE4C
     }
-    .title_box{
-      position:relative;
-    }
-    .title_box .sp_container{
-          position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    }
-     .title_box div.sp_clear_btn {
-      display:none;
-    }
 </style>
 
 <!-- Main content -->
-<section class="content" style="padding:24px 48px;background-color:#f2f2f2;margin-bottom: 40px;" ng-app="myApp" ng-controller="indexCtrl" ng-cloak>
+<section class="content" style="padding:24px 48px;" ng-app="myApp" ng-controller="indexCtrl" ng-cloak>
     <div class="row margin0 title_num" style="margin-bottom: 24px;">
         <div class="col-md-12 title_main" style="padding:0">
             <div class="title_li col-md-2 padding_left0" style="">
@@ -545,7 +533,7 @@ $this->title = '概览';
                         <span class="float_left box_title_text">受影响资产</span>
                     </p>
                 </div>
-                <table class="table table-striped table_th">
+                <table class="table table-striped">
                     <tr style="height:42px;">
                         <th style="width:150px">资产名称</th>
                         <th></th>
@@ -618,12 +606,20 @@ $this->title = '概览';
                 <div class="title_box" style="padding-left:24px;margin-bottom: 14px;">
                     <p>
                         <span class="float_left box_title_text">最新情报</span>
-                     <input type="text" data-init="信誉情报" class="selectPage_box" id="model_select">
+                        <select class="slect_input" style="background-color: #fff;position: absolute;
+    right: 15px;top:14px;" ng-model="select_model"
+                            ng-options="x.num as x.type for x in select_list"
+                            ng-change="select_change(select_model)"></select>
                     </p>
                 </div>
-                <table class="table table-striped table_th">
+                <table class="table table-striped">
                     <tr style="height:42px;" ng-if="select_model!='攻击情报'">
                         <th ng-repeat="item in title_list">{{item.name}}</th>
+                    </tr>
+<tr ng-if="select_model=='信誉情报'&& index < 7 " style="height:42px;" ng-repeat="(index,item) in real_time_threat"  >
+                       <td title="{{item.indicator}}">{{item.indicator}}</td>
+                       <td>{{item.category}}</td>
+                       <td>{{item.hoohoolab_last_seen}}</td>
                     </tr>
                     <!-- 漏洞情报 -->
                     <tr ng-repeat="(index,item) in loophole_intelligence_data" ng-if="select_model=='漏洞情报' "
@@ -631,12 +627,6 @@ $this->title = '概览';
                         <td title="{{item.title}}">{{item.title}}</td>
                         <td style="color:{{item.color}};">{{item.degree}}</td>
                         <td >{{item.poc == false?'无':'有'}}</td>
-                    </tr>
-                    <!-- 信誉情报 -->
-                    <tr ng-if="select_model=='信誉情报'&& index < 7 " style="height:42px;" ng-repeat="(index,item) in real_time_threat"  >
-                       <td title="{{item.indicator}}">{{item.indicator}}</td>
-                       <td>{{item.category}}</td>
-                       <td>{{item.hoohoolab_last_seen}}</td>
                     </tr>
                     <!-- 暗网情报 -->
                     <tr ng-repeat="(index,item) in darknet_list_data" ng-if="select_model=='暗网情报'" style="height:42px;">
@@ -655,13 +645,13 @@ $this->title = '概览';
                         <span class="float_left box_title_text">最新预警</span>
                     </p>
                 </div>
-                <table class="table table-striped table_th">
+                <table class="table table-striped">
                     <tr style="height:42px;">
                           <th style="width: 150px">预警时间</th>
-                                <th >预警类型</th>
+                                <th style="width: 100px">预警类型</th>
                                 <th>威胁指标</th>
-                                <th >失陷资产</th>
-                                <th style="width: 100px">预警等级</th>
+                                <th style="width: 100px">失陷资产</th>
+                                <th>预警等级</th>
                     </tr>
                       <tr ng-repeat="item in pages.data" style="height: 42px;"
                                 ng-click="goAlarm()">

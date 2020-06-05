@@ -41,7 +41,7 @@ $this->title = '用户管理';
               <div class="row">
 
                 <div class="col-sm-12">
-                    <table class="table table-hover table_th" ng-show="pages.data.length>0" style="border-bottom: 1px solid #f4f4f4;">
+                    <table class="table table-hover" ng-show="pages.data.length>0" style="border-bottom: 1px solid #f4f4f4;">
                         <tr>
                           <th><input type="checkbox" ng-checked="UserIDList.length == pages.data.length" ng-click="selectAll()"></th>
                           <th style="text-align:center;">序号</th>

@@ -1,25 +1,33 @@
-var myApp = angular.module("myApp", []);
+ var myApp = angular.module("myApp", []);
 var rootScope;
 myApp.controller("shareCtrl", function ($scope, $http, $filter) {
     $scope.init = function () {
         $scope.listObj = {};
         $scope.list = [];
         $scope.listCount = 0;
-        $scope.offset = 1;
-        $scope.limit = 5;
         $scope.btn_show = true;
         $scope.btn_text = "加载更多";
         $scope.wds = [];
         $scope.searchWd = "";
         $scope.get_list();
+        $scope.enter();
+    };
+
+    $scope.enter = function () {
+        document.onkeydown = function (e) {
+            // 兼容FF和IE和Opera
+            var theEvent = e || window.event;
+            var code = theEvent.keyCode || theEvent.which || theEvent.charCode;
+            if (code == 13) {
+                $scope.search();
+            }
+        };
     };
     $scope.push2list = function (item) {
         if (!$scope.listObj[item.id]) {
             item.timeString = moment(item.created_at, "X").fromNow();
             $scope.list.push(item);
             $scope.listObj[item.id] = item;
-
-            console.log($scope.list)
         }
     };
     $scope.search = function () {
@@ -31,20 +39,22 @@ myApp.controller("shareCtrl", function ($scope, $http, $filter) {
     };
     $scope.get_list = function () {
         var postData = {
-             limit: $scope.limit,
-             offSet: $scope.offset
+            wds: $scope.wds,
+            offSet: Object.keys($scope.listObj).length
         };
+        if ($scope.listCount != 0 && $scope.listCount <= postData.offSet) {
+            $scope.btn_show = false;
+            $scope.btn_text = "加载完成";
+            return;
+        }
         $http.post("/share/list", postData).then(
             function success(rsp) {
-                console.log('*****')
                 console.log(rsp);
-                if ($scope.offset * $scope.limit >= rsp.data.count) {
-                    $scope.btn_show = false;
-                    //$scope.btn_text = "加载完成";
-                }
-
                 if (rsp.data.status == "success") {
                     $scope.listCount = rsp.data.count;
+                    if ($scope.listCount == 0) {
+                        $scope.btn_show = false;
+                    }
                     angular.forEach(rsp.data.data, function (item) {
                         $scope.push2list(item);
                     });
@@ -55,8 +65,6 @@ myApp.controller("shareCtrl", function ($scope, $http, $filter) {
     };
 
     $scope.add_more = function () {
-       // console.log($scope.list);
-        $scope.offset += 1;
         $scope.get_list();
     };
     //   共享情报提交
@@ -71,6 +79,7 @@ myApp.controller("shareCtrl", function ($scope, $http, $filter) {
         sessionStorage.setItem("share_comment", JSON.stringify(item));
         window.location.href = "/share/comment-detail";
     };
+
     $scope.del = function (item, index) {
         zeroModal.confirm({
             content: "确定删除这个分享吗？",
@@ -86,8 +95,6 @@ myApp.controller("shareCtrl", function ($scope, $http, $filter) {
                         if (rsp.data.status == "success") {
                             $scope.list.splice(index, 1);
                             delete $scope.listObj["" + item.id];
-
-                            $scope.get_list();
                         }
                         zeroModal.close(loading);
                     },
@@ -99,6 +106,5 @@ myApp.controller("shareCtrl", function ($scope, $http, $filter) {
             cancelFn: function () {}
         });
     };
-
     $scope.init();
 });

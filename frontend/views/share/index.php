@@ -3,10 +3,10 @@
 
 $this->title = '情报共享';
 ?>
-<link rel="stylesheet" href="/css/share/share.css">
+<link rel="stylesheet" href="/css/share/share_index.css">
 <section class="share_box" ng-app="myApp" ng-controller="shareCtrl" ng-cloak>
     <div class="search_box">
-        <input type="text" placeholder="请输入IP、URL、域名、HASH" class="input_box" ng-model="searchWd">
+        <input type="text" class="input_box" ng-model="searchWd">
         <button class="search_btn_box" ng-click="search()">
             <img src="/images/search/search.png" alt="">
         </button>
@@ -21,12 +21,20 @@ $this->title = '情报共享';
         </div>
         <div class="share_container_box_bom">
             <div class="share_container_box_bom_item" ng-repeat="item in list track by $index" ng-click="detail(item)">
-                <p style="margin-bottom:12px;height:28px;">
-                    <span class="share_container_box_bom_item_name">{{item.name}}</span>
-                </p>
-                <p class="share_container_box_bom_item_describe" title="{{item.describe}}">
-                    {{item.describe}}
-                </p>
+                <div style="height:75px">
+                    <div class="share_item_box_left">
+                        <p style="margin-bottom:12px;height:28px;">
+                            <span class="share_container_box_bom_item_name">{{item.name}}</span>
+                        </p>
+                        <p class="share_container_box_bom_item_describe" title="{{item.describe}}">
+                            {{item.describe}}
+                        </p>
+                    </div>
+                    <div class="share_item_box_right">
+                        <span class="tagname_box"  ng-repeat="eles in item.tagNames track by $index">{{eles}}</span>
+                    </div>
+                </div>
+
                 <p class="tag_box">
                     <span class="tag_item">
                         <span ng-bind="item.data==null?'0':item.data.length"></span>
@@ -41,10 +49,10 @@ $this->title = '情报共享';
                         <span>{{item.timeString}}</span>
                     </span>
                     <span class="tag_box_comment">
-                        <img src="/images/share/del_icon.png"
-                         ng-click="del(item,$index);$event.stopPropagation();" class="img_icon" alt="">
+                        <img src="/images/share/del_icon.png" ng-click="del(item,$index);$event.stopPropagation();"
+                            class="img_icon" alt="">
                     </span>
-                        <span class="tag_box_comment" >
+                    <span class="tag_box_comment" ng-click="goto_comment(item);$event.stopPropagation();">
                         <img src="/images/share/comment.png" class="img_icon" alt="">
                         <span>{{item.cq}}</span>
                     </span>
@@ -52,12 +60,14 @@ $this->title = '情报共享';
                         <img src="/images/share/look.png" class="img_icon" alt="">
                         <span>{{item.uv}}</span>
                     </span>
+
                 </p>
             </div>
         </div>
     </div>
-  <div ng-if="list.length!=0 && btn_show">
     <button class="btn_more" ng-click="add_more()" ng-if="btn_show" ng-bind="btn_text">加载更多</button>
-  </div>
 </section>
+
+
 <script src="/js/controllers/share.js"></script>
+

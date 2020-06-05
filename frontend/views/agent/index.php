@@ -42,7 +42,6 @@ $this->title = '情报聚合';
     /* 情报提取 */
     .agent_container {
         padding: 36px 48px;
-        padding-top:0;
     }
 
     .agent_top {
@@ -155,14 +154,14 @@ $this->title = '情报聚合';
     }
 </style>
 <!-- Main content -->
-<section ng-app="myApp" ng-controller="myCtrl" style="margin-bottom: 40px;">
+<section ng-app="myApp" ng-controller="myCtrl">
     <div class="agent_container">
         <div class="agent_top">
             <div class="agent_top_title">
                 默认聚合
             </div>
             <div class="agent_top_table">
-                <table class="table ng-cloak domain_table table_th">
+                <table class="table ng-cloak domain_table">
                     <tr>
                         <th>节点名</th>
                         <th>指标</th>

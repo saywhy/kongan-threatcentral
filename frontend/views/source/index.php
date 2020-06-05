@@ -51,7 +51,7 @@ $this->title = '情报';
 
             <div class="tab-content" style="padding-top:0px;border-bottom:0px; ">
 
-              <table class="table table-hover table_th" id="inputNodeTable">
+              <table class="table table-hover" id="inputNodeTable">
                 <thead>
                   <tr>
                     <th>节点名</th>

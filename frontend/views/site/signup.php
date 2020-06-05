@@ -4,6 +4,9 @@
 /* @var $form yii\bootstrap\ActiveForm */
 /* @var $model \common\models\LoginForm */
 
+use yii\bootstrap\ActiveForm;
+use yii\helpers\Html;
+
 $this->title = '创建管理员';
 $this->params['breadcrumbs'][] = $this->title;
 $this->context->layout = false;
@@ -24,7 +27,7 @@ $this->context->layout = false;
 <div class="content">
 
     <div class="header">
-        <label>威胁情报系统</label>
+        <label>上汽集团威胁情报系统</label>
     </div>
     <div class="body">
         <div class="site-login">
@@ -53,7 +56,6 @@ $this->context->layout = false;
                     <?php ActiveForm::end();?>
                 </div>
             </div>
-        </div>
         </div>
     </div>
 </div>

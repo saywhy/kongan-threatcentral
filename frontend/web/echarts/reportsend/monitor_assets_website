@@ -1,0 +1,1 @@
+{"tooltip":{"trigger":"item","formatter":"{b}:{c}({d}%)"},"series":[{"animation":false,"name":"","type":"pie","radius":"55%","center":["50%","60%"],"data":[{"client_ip":"","count":0,"name":"","value":0}],"label":{"normal":{"formatter":"{b}:{c}({d}%)"}}}]}

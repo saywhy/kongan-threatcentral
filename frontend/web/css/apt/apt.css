@@ -249,10 +249,10 @@ p {
 
 .apt_header {
   min-height: 337px;
+  border-top: 1px solid #ececec;
   background: #ffffff;
   box-shadow: 0 2px 4px 0 #ececec;
   padding: 36px 48px;
-  padding-top: 0;
 }
 
 .apt_header_select_box {

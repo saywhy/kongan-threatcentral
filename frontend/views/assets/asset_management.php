@@ -58,8 +58,7 @@ $this->title = '资产管理';
 
     /* 资产管理 */
     .Management_container {
-        padding: 24px 36px;
-        padding-top:0;
+        padding: 36px 48px;
     }
 
     .Management_main {
@@ -70,10 +69,10 @@ $this->title = '资产管理';
     }
 
     .Management_main_top {
-        height: 42px;
+        height: 124px;
+        padding: 0 36px;
         position: relative;
         z-index: 99;
-            margin-bottom: 24px;
     }
 
     .Management_main_top_box {
@@ -88,7 +87,7 @@ $this->title = '资产管理';
     .input_box {
         border: 1px solid #ECECEC;
         border-radius: 4px;
-        width: 160px;
+        width: 210px;
         height: 42px;
         margin-right: 16px;
         padding-left: 30px;
@@ -211,43 +210,51 @@ $this->title = '资产管理';
                 <!-- 网站资产 -->
                 <span class="input_box_item" ng-if="domain_search_if">
                     <input class="input_box" placeholder="输入资产名称" ng-model="search.domain_asset_name"
-                       type="text">
-                    <!-- <ul class="container_ul" ng-show="domain_name_list_if">
+                        ng-focus="get_domain_name_focus()" ng-blur="get_domain_name_blur()"
+                        ng-keyup="myKeyup_domain_name(search.domain_asset_name)" type="text">
+                    <ul class="container_ul" ng-show="domain_name_list_if">
                         <li ng-repeat="item in domain_name_list" class="li_hover"
                             ng-click="domain_name_list_click(item.asset_name)">
                             {{item.asset_name}}
                         </li>
-                    </ul> -->
+                    </ul>
                     <img src="/images/alert/search_icon.png" class="search_icon" alt="">
                 </span>
                 <span class="input_box_item" ng-if="domain_search_if">
                     <input class="input_box" type="text" placeholder="输入资产分组名称" ng-model="search.domain_group_name"
-                      >
-                    <!-- <ul class="container_ul" ng-show="domain_group_list_if">
+                        ng-focus="get_group_name_focus()" ng-keyup="myKeyup_domain_group(search.domain_group_name)">
+                    <ul class="container_ul" ng-show="domain_group_list_if">
                         <li ng-repeat="item in domain_group_list" class="li_hover"
                             ng-click="group_name_list_click(item.group_name)">
                             {{item.group_name}}
                         </li>
-                    </ul> -->
+                    </ul>
                     <img src="/images/alert/search_icon.png" class="search_icon" alt="">
                 </span>
                 <!-- 主机资产 -->
                 <span class="input_box_item" ng-if="host_search_if">
                     <input class="input_box" placeholder="输入资产名称"
-              type="text">
+                    ng-model="search.host_asset_name" ng-focus="get_host_name_focus()" ng-blur="get_host_name_blur()"
+                    ng-keyup="myKeyup_host_name(search.host_asset_name)" type="text">
 
-                 <!-- <ul class="container_ul" ng-show="host_name_list_if">
+                 <ul class="container_ul" ng-show="host_name_list_if">
                     <li ng-repeat="item in host_name_list" class="li_hover"
                         ng-click="host_name_list_click(item.asset_name)">
                         {{item.asset_name}}
                     </li>
-                </ul> -->
+                </ul>
                     <img src="/images/alert/search_icon.png" class="search_icon" alt="">
                 </span>
                 <span class="input_box_item" ng-if="host_search_if">
                     <input class="input_box" type="text" placeholder="输入资产分组名称"
-                    ng-model="search.host_group_name">
-
+                    ng-model="search.host_group_name" ng-focus="get_host_group_focus()"
+                    ng-keyup="myKeyup_host_group(search.host_group_name)">
+                     <ul class="container_ul" ng-show="host_group_list_if">
+                    <li ng-repeat="item in host_group_list" class="li_hover"
+                        ng-click="host_group_list_click(item.group_name)">
+                        {{item.group_name}}
+                    </li>
+                </ul>
                     <img src="/images/alert/search_icon.png" class="search_icon" alt="">
                 </span>
                 <button class="btn_search" ng-click="search_res()">搜索</button>
@@ -269,7 +276,7 @@ $this->title = '资产管理';
 
             <div class="tab-content">
                 <div id="info" class="tab-pane active">
-                    <table class="table ng-cloak domain_table table_th">
+                    <table class="table ng-cloak domain_table">
                         <tr>
                             <th>资产名称</th>
                             <th style="min-width: 80px;">资产分组</th>
@@ -282,10 +289,10 @@ $this->title = '资产管理';
                         </tr>
                         <!-- <tr style="cursor: pointer;" ng-repeat="item in loophole.data"> -->
                         <tr style="cursor: pointer;" ng-repeat="item in domain_data.data">
-                            <td title={{item.asset_name}} >{{item.asset_name }}</td>
-                            <td title={{item.group_name}} >{{item.group_name}}</td>
-                            <td title={{item.status_code}} >{{item.status_code}}</td>
-                            <td title={{item.domain}}  >{{item.domain}}</td>
+                            <td title={{item.asset_name}}>{{item.asset_name}}</td>
+                            <td title={{item.group_name}}>{{item.group_name}}</td>
+                            <td title={{item.status_code}}>{{item.status_code}}</td>
+                            <td title={{item.domain}}>{{item.domain}}</td>
                             <td>{{item.in_type == 'api'?'自动导入':'手动导入'}}</td>
                             <td title={{item.addtime}}>{{item.addtime}}</td>
                             <td title={{item.location}}>{{item.location}}</td>
@@ -301,7 +308,7 @@ $this->title = '资产管理';
                             </td>
                         </tr>
                     </table>
-                    <div >
+                    <div style="border-top: 1px solid #f4f4f4;padding: 20px;">
                         <em style="font-size: 14px;color: #BBBBBB;">共有<span ng-bind="domain_data.count"></span>条资产</em>
                         <!-- angularjs分页 -->
                         <ul class="pagination pagination-sm no-margin pull-right ng-cloak">
@@ -334,7 +341,7 @@ $this->title = '资产管理';
                     </div>
                 </div>
                 <div id="loophole" class="tab-pane">
-                    <table class="table ng-cloak domain_table table_th">
+                    <table class="table ng-cloak domain_table">
                         <tr>
                             <th style="min-width: 80px;">主机地址</th>
                             <th style="min-width: 80px;">资产分组</th>
@@ -367,7 +374,7 @@ $this->title = '资产管理';
                             </td>
                         </tr>
                     </table>
-                    <div style="padding: 20px;">
+                    <div style="border-top: 1px solid #f4f4f4;padding: 20px;">
                         <em style="font-size: 14px;color: #BBBBBB;">共有<span ng-bind="host_data.count"></span>条资产</em>
                         <!-- angularjs分页 -->
                         <ul class="pagination pagination-sm no-margin pull-right ng-cloak">

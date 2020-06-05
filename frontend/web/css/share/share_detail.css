@@ -1,6 +1,5 @@
 .share_detail_box {
-  padding: 24px 36px;
-  padding-top: 0;
+  padding: 36px 48px;
 }
 
 .share_detail_container {
@@ -58,7 +57,7 @@ table tr:nth-child(even) {
   background-color: #fff;
 }
 
-.table-striped>tbody>tr:nth-of-type(odd) {
+.table-striped > tbody > tr:nth-of-type(odd) {
   background-color: #eef6ff;
 }
 

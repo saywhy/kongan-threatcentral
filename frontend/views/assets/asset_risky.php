@@ -61,8 +61,7 @@ $this->title = '受影响资产';
 
     /* 受影响资产 */
     .myAsset_content {
-        padding: 24px 36px;
-        padding-top:0;
+        padding: 36px 48px;
     }
 
     .myAsset_box {
@@ -72,16 +71,16 @@ $this->title = '受影响资产';
     }
 
     .myAsset_box_top {
-        height: 42px;
+        height: 124px;
+        padding: 0 36px;
         position: relative;
-        margin-bottom:24px;
     }
 
     .myAsset_box_top_box {
         height: 42px;
         position: absolute;
         top: 50%;
-        left: 0;
+        left: 36px;
         transform: translateY(-50%);
     }
 
@@ -210,9 +209,6 @@ $this->title = '受影响资产';
         word-wrap:break-word;
         word-break:break-all;
     }
-    .cursor{
-        cursor:pointer;
-    }
 </style>
 <section class="myAsset_content" ng-app="myApp" ng-cloak ng-controller="myAssetsRisky">
     <div class="myAsset_box">
@@ -220,18 +216,26 @@ $this->title = '受影响资产';
             <div class="myAsset_box_top_box">
                 <div class="input_item">
                     <input type="text" class="input_box" placeholder="输入资产名称" ng-model="search.asset_ip"
-                     >
-                    <!-- <ul class="container_ul" ng-show="assets_name_list_if">
+                        ng-focus="get_assets_name_focus()" ng-blur="get_domain_name_blur()"
+                        ng-keyup="myKeyup_assets_name(search.asset_ip)">
+                    <ul class="container_ul" ng-show="assets_name_list_if">
                         <li ng-repeat="item in assets_name" class="li_hover"
                             ng-click="assets_name_list_click(item.asset_ip)">
                             {{item.asset_ip}}
                         </li>
-                    </ul> -->
+                    </ul>
                     <img src="/images/alert/search_icon.png" class="search_icon" alt="">
                 </div>
                 <div class="input_item">
                     <input type="text" class="input_box" placeholder="输入资产分组名称" ng-model="search.company"
-                      >
+                        ng-focus="get_company_list_focus()" ng-blur="get_domain_name_blur()"
+                        ng-keyup="myKeyup_company_list(search.company)">
+                    <ul class="container_ul" ng-show="company_list_if">
+                        <li ng-repeat="item in company_list" class="li_hover"
+                            ng-click="company_list_click(item.company)">
+                            {{item.company}}
+                        </li>
+                    </ul>
                     <img src="/images/alert/search_icon.png" class="search_icon" alt="">
                 </div>
                 <div class="input_item">
@@ -241,7 +245,7 @@ $this->title = '受影响资产';
             </div>
         </div>
         <div class="myAsset_box_bom" ng-click="if_false()">
-            <table class="table domain_table table_th ng-cloak">
+            <table class="table domain_table ng-cloak">
                 <tr>
                     <th>受影响资产</th>
                     <th>资产分组</th>
@@ -249,22 +253,11 @@ $this->title = '受影响资产';
                     <th>威胁预警</th>
                     <th>漏洞预警</th>
                 </tr>
-                <tr ng-repeat="item in risk_data.data" >
-                    <td>
-                        <span class="cursor" ng-click="list_detail(item,'alert')">
-                        {{item.asset_ip}}
-                        </span>
-                    </td>
-                    <td>
-                            <span class="cursor" ng-click="list_detail(item,'alert')">
-                        {{item.company}}
-                        </span>
-                    </td>
-                    <td>
-                               <span class="cursor" ng-click="list_detail(item,'alert')">
-                        {{item.total_count}}
-                        </span>
-                    <td class="td_box" ng-click="list_detail(item,'alert')">
+                <tr ng-repeat="item in risk_data.data" style="cursor:pointer;" ng-click="list_detail(item)">
+                    <td>{{item.asset_ip}}</td>
+                    <td>{{item.company}}</td>
+                    <td>{{item.total_count}}</td>
+                    <td class="td_box">
                         <!-- <p style="padding:0;margin:0;"> -->
                         <span class="high_num">{{item.high_alert_count}}</span>
                         <span class="mid_num">{{item.medium_alert_count}}</span>
@@ -276,7 +269,7 @@ $this->title = '受影响资产';
                             <span class="low_line"></span>
                         </div>
                     </td>
-                    <td class="td_box" ng-click="list_detail(item,'loophole')">
+                    <td class="td_box">
                         <p style="padding:0;margin:0;">
                             <span class="high_num">{{item.high_loophole_count}}</span>
                             <span class="mid_num">{{item.medium_loophole_count}}</span>

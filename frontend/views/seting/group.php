@@ -63,7 +63,7 @@ $this->title = '用户组';
                 </div>
                 <div class="box-body">
                   <div class="row margin">
-                    <table class="table table-hover table_th" id="userList">
+                    <table class="table table-hover" id="userList">
                       <thead>
                         <tr>
                           <th>用户名</th>

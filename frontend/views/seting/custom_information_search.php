@@ -72,14 +72,14 @@ $this->title = '漏洞关联';
     <div class="loop_connect_box">
         <div class="loop_connect_box_top">
             <div class="position_box">
-                <input  autocomplete="off" type="text" placeholder="请输入漏洞日志名称" class="input_box" ng-model="search_data.risk_name" style="padding-left: 15px;">
-                <input  autocomplete="off" type="text" placeholder="请输入漏洞情报名称" class="input_box" ng-model="search_data.title" style="padding-left: 15px;">
+                <input type="text" placeholder="请输入漏洞日志名称" class="input_box" ng-model="search_data.risk_name">
+                <input type="text" placeholder="请输入漏洞情报名称" class="input_box" ng-model="search_data.title">
                 <button class="search_btn" ng-click="get_loop_list()">搜索规则</button>
                 <button class="add_btn" ng-click="add_loop()">新建规则</button>
             </div>
         </div>
         <div class="loop_connect_box_table">
-            <table class="table  domain_table table_th ng-cloak">
+            <table class="table  domain_table ng-cloak">
                 <tr style="text-algin:center">
                     <th style="width:200px;">时间</th>
                     <th>漏洞日志名称</th>
@@ -88,8 +88,8 @@ $this->title = '漏洞关联';
                 </tr>
                 <tr ng-repeat="item in loop_list.data">
                     <td>{{item.created_at*1000 | date : 'yyyy-MM-dd HH:mm'}}</td>
-                    <td>{{item.risk_name_cn}}</td>
-                    <td>{{item.title_cn}}</td>
+                    <td>{{item.risk_name}}</td>
+                    <td>{{item.title}}</td>
                     <td>
                         <img src="/images/set/edit_icon.png" class="img_icon" ng-click="edit_loop(item)" alt="">
                         <img src="/images/set/look_icon.png" class="img_icon" ng-click="look_loop(item)" alt="">
@@ -150,11 +150,11 @@ $this->title = '漏洞关联';
         <div id="custom_add">
             <p class="edit_title">漏洞日志名称</p>
             <div>
-                <input autocomplete="off"  class="input_box_bottom" placeholder="请输入漏洞日志名称" ng-model="add_lopp.risk_name" type="text">
+                <input class="input_box_bottom" placeholder="请输入漏洞日志名称" ng-model="add_lopp.risk_name" type="text">
             </div>
             <p class="edit_title">漏洞情报名称</p>
             <div>
-                <input autocomplete="off" class="input_box_bottom" placeholder="请输入漏洞情报名称" ng-model="add_lopp.title" type="text">
+                <input class="input_box_bottom" placeholder="请输入漏洞情报名称" ng-model="add_lopp.title" type="text">
             </div>
             <div style="text-align: center;">
                 <button class="save_btn" ng-click="add_save()">保存</button>
@@ -167,11 +167,11 @@ $this->title = '漏洞关联';
         <div id="custom_edit">
             <p class="edit_title">漏洞日志名称</p>
             <div>
-                <input autocomplete="off"  class="input_box_bottom" placeholder="请输入漏洞日志名称" ng-model="edit_lopp.risk_name" type="text">
+                <input class="input_box_bottom" placeholder="请输入漏洞日志名称" ng-model="edit_lopp.risk_name" type="text">
             </div>
             <p class="edit_title">漏洞情报名称</p>
             <div>
-                <input autocomplete="off" class="input_box_bottom" placeholder="请输入漏洞情报名称" ng-model="edit_lopp.title" type="text">
+                <input class="input_box_bottom" placeholder="请输入漏洞情报名称" ng-model="edit_lopp.title" type="text">
             </div>
             <div style="text-align: center;">
                 <button class="save_btn" ng-click="edit_loop_save()">保存</button>
@@ -182,7 +182,7 @@ $this->title = '漏洞关联';
     <!-- 关联漏洞预警列表-->
     <div style="display: none;" id="hideenBox_relation_alert">
         <div id="custom_relation_alert">
-            <table class="table domain_table table_th ng-cloak">
+            <table class="table domain_table ng-cloak">
                 <tr>
                     <th style="width:150px;">预警时间</th>
                     <th>资产</th>
@@ -211,7 +211,7 @@ $this->title = '漏洞关联';
                     </td>
                 </tr>
             </table>
-            <div style="padding: 10px;">
+            <div style="border-top: 1px solid #f4f4f4;padding: 10px;">
                 <em>共有<span ng-bind="get_relation_data.count"></span>条漏洞</em>
                 <ul class="pagination pagination-sm no-margin pull-right ng-cloak">
                     <li><a href="javascript:void(0);" ng-click="get_relation(get_relation_data.pageNow-1)"

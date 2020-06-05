@@ -2,7 +2,7 @@
 /* @var $this yii\web\View */
 $this->title = 'APT武器库';
 ?>
-<section ng-app="myApp" ng-controller="aptCtrl" style="margin-bottom: 40px;" ng-cloak>
+<section ng-app="myApp" ng-controller="aptCtrl" ng-cloak>
 
     <div class="apt_header">
         <div class="apt_header_select_box">
@@ -41,8 +41,9 @@ $this->title = 'APT武器库';
                 </div>
                 <div class="apt_search_list_item_mid">
                     <span class="apt_search_list_item_value" ng-class="item.class?'blue':'black'"
-                        ng-repeat="(index,item) in attack_source track by $index">
-                        <span ng-click="item_p_click(item,'source')">{{item.name}}</span>
+                        ng-repeat="(index,item) in attack_source track by $index"
+                        ng-click="item_p_click(item,'source')">
+                        <span>{{item.name}}</span>
                         <span>(</span>
                         <span>{{item.num}}</span>
                         <span>)</span>
@@ -61,8 +62,9 @@ $this->title = 'APT武器库';
                 </div>
                 <div class="apt_search_list_item_mid">
                     <span class="apt_search_list_item_value" ng-class="item.class?'blue':'black'"
-                        ng-repeat="(index,item) in industry track by $index">
-                        <span  ng-click="item_p_click(item,'industry')">{{item.name}}</span>
+                        ng-repeat="(index,item) in industry track by $index"
+                        ng-click="item_p_click(item,'industry')">
+                        <span>{{item.name}}</span>
                         <span>(</span>
                         <span>{{item.num}}</span>
                         <span>)</span>
@@ -81,8 +83,9 @@ $this->title = 'APT武器库';
                 </div>
                 <div class="apt_search_list_item_mid">
                     <span class="apt_search_list_item_value" ng-class="item.class?'blue':'black'"
-                        ng-repeat="(index,item) in attack_target track by $index">
-                        <span ng-click="item_p_click(item,'target')">{{item.name}}</span>
+                        ng-repeat="(index,item) in attack_target track by $index"
+                        ng-click="item_p_click(item,'target')">
+                        <span>{{item.name}}</span>
                         <span>(</span>
                         <span>{{item.num}}</span>
                         <span>)</span>
@@ -101,7 +104,8 @@ $this->title = 'APT武器库';
                 </div>
                 <div class="apt_search_list_item_mid">
                     <span class="apt_search_list_item_value" ng-class="item.class?'blue':'black'"
-                        ng-repeat="(index,item) in motive track by $index"  ng-click="item_p_click(item,'source')">
+                        ng-repeat="(index,item) in motive track by $index"
+                        ng-click="item_p_click(item,'source')">
                         <span>{{item.name}}</span>
                         <span>(</span>
                         <span>{{item.num}}</span>

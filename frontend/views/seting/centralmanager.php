@@ -32,7 +32,7 @@ $this->title = '集中管理';
             </div>
         </div>
         <div class="central_box_table" ng-if="set_true">
-            <table class="table  domain_table table_th ng-cloak">
+            <table class="table  domain_table ng-cloak">
                 <tr style="text-algin:center">
                     <th>设备IP</th>
                     <th>分支机构名称</th>

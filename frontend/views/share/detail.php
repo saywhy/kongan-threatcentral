@@ -28,7 +28,7 @@ $this->title = '共享详情';
 
             </div>
             <div class="table_box" >
-                <table class="table  table-striped ng-cloak table_th" ng-if="describe">
+                <table class="table  table-striped ng-cloak" ng-if="describe">
                     <tr style="text-algin:center" class="alert_table_tr">
                         <th style="width:80px;">序号</th>
                         <th>指标值</th>

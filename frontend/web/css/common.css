@@ -99,7 +99,7 @@ table tr:nth-child(even) {
   background-color: #fff;
 }
 
-.table-striped>tbody>tr:nth-of-type(odd) {
+.table-striped > tbody > tr:nth-of-type(odd) {
   background-color: #eef6ff;
 }
 
@@ -139,12 +139,12 @@ input:focus {
   outline: none;
 }
 
-.pagination>.active>a,
-.pagination>.active>a:focus,
-.pagination>.active>a:hover,
-.pagination>.active>span,
-.pagination>.active>span:focus,
-.pagination>.active>span:hover {
+.pagination > .active > a,
+.pagination > .active > a:focus,
+.pagination > .active > a:hover,
+.pagination > .active > span,
+.pagination > .active > span:focus,
+.pagination > .active > span:hover {
   z-index: 3;
   color: #fff;
   cursor: default;
@@ -164,7 +164,7 @@ input:focus {
   height: 56px;
 }
 
-.detail_bom_nav>li>a {
+.detail_bom_nav > li > a {
   height: 56px;
   line-height: 56px !important;
   font-size: 16px !important;
@@ -177,94 +177,17 @@ input:focus {
   color: #409eff !important;
 }
 
-.detail_bom_nav>li>a:hover {
+.detail_bom_nav > li > a:hover {
   border: none;
   background: transparent;
 }
 
-.detail_bom_nav>li.active>a {
+.detail_bom_nav > li.active > a {
   color: #409eff !important;
   border: none !important;
 }
 
-.detail_bom_nav>li.active {
+.detail_bom_nav > li.active {
   border-top: 3px solid #0070ff;
-  border-radius: 4px;
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-}
-
-input[type="number"] {
-  -moz-appearance: textfield;
-}
-
-
-.table_th th {
-  border-right: 1px solid #ececec !important;
-}
-
-.table_th th:nth-last-child(1) {
-  border-right: none !important;
-}
-
-.btn-primary {
-  background-color: #0070FF !important;
-  border-color: #0070FF !important;
-}
-
-.daterangepicker {
-  z-index: 9999999;
-}
-
-.hoohoolab-footer_cn {
-  height: 50px;
-  position: fixed;
-  bottom: 0px;
-  text-align: center;
-  color: #666;
-  height: 40px;
-  line-height: 40px;
-  width: 100%;
-  background: #ececec;
-  z-index: 9999;
-}
-
-.content-container {
-  /* padding-bottom: 29px; */
-}
-
-/* 下拉框样式 */
-.sp_result_area {
-  z-index: 9999;
-  border: 1px solid #ECECEC;
-  background: #fff;
-  border-radius: 4px;
-  top: 45px !important;
-  left: 0 !important;
-}
-
-.sp_result_area {
-  width: 160px;
-}
-
-.sp_container {
-  margin-right: 16px;
-}
-
-.selectPage_box {
-  box-shadow: none;
-  padding-left: 8px;
-  border: 1px solid #ECECEC;
-  border-radius: 4px;
-  height: 42px;
-  width: 160px;
-  margin-right: 16px;
-}
-
-.sp_input:focus {
-  border: 1px solid #0070FF;
   border-radius: 4px;
 }

@@ -78,50 +78,186 @@ border-top-color:transparent;
 
 }
 .hover_li_title.active{
-   background:#456196 !important;
+background:#456196 !important;
 }
 
 </style>
 <div ng-controller="mainNavCtrl" id="navApp" ng-cloak>
     <ul class="nav nav-pills">
         <!-- 首页 -->
-        <li role="presentation" class="dropdown <?=isActive(['/site/index', '/'])?> <?=isActive(['/map.html'])?> hover_li_title"  ng-if="menu_list.index">
-            <!--<a class="dropdown-toggle nav_li_a" href="<?=getPath('/site/index')?>">-->
-            <a class="dropdown-toggle nav_li_a" ng-click="get_Path(1)">
-                <i class="fa fa-home"></i> 首页
+        <li role="presentation" class="dropdown  <?=isActive(['/site/index'])?> <?=isActive(['/map.html'])?> hover_li_title"  ng-if="menu_list.index">
+            <a class="dropdown-toggle nav_li_a"  data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                aria-expanded="false">
+                <i class="fa fa-home"></i> 首页<span class="caret"></span>
             </a>
+            <ul class="dropdown-menu">
+                <li class="treeview <?=isActive(['/site/index'])?>"
+                    ng-if="menu_list.index_overview">
+                    <a href="<?=getPath('/site/index')?>">
+                        <span>概览</span>
+                    </a>
+                </li>
+                <li class="treeview <?=isActive(['/map.html'])?>"
+                    ng-if="menu_list.index_BigScreen">
+                    <a href="<?=getPath('/map.html')?>">
+                        <span>可视化大屏</span>
+                    </a>
+                </li>
+            </ul>
         </li>
         <!-- 情报 -->
-        <li role="presentation" class="dropdown hover_li_title <?=isActive(['/search/index', '/agent/index', '/share/index', '/intelligence/source-management',
-    '/vehicleintelligence/special', '/vehicleintelligence/loophole', '/search/apt-lib'])?> " ng-if="menu_list.intelligence">
-            <a class="dropdown-toggle nav_li_a"  ng-click="get_Path(15)">
-                <i class="fa fa-podcast"></i> 情报
+        <li role="presentation" class="dropdown hover_li_title <?=isActive(['/search/index', '/agent/index', '/share/index', '/intelligence/source-management', '/search/apt-lib'])?> " ng-if="menu_list.intelligence">
+            <a class="dropdown-toggle nav_li_a"  data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                aria-expanded="false">
+                <i class="fa fa-podcast"></i> 情报<span class="caret"></span>
             </a>
+            <ul class="dropdown-menu">
+                <li class="treeview <?=isActive(['/search/index'])?>"
+                    ng-if="menu_list.intelligence_query">
+                    <a href="<?=getPath('/search/index')?>" >
+                        <span>情报查询</span>
+                    </a>
+                </li>
+                <li class="treeview <?=isActive(['/agent/index'])?>"
+                    ng-if="menu_list.intelligence_extract">
+                    <a href="<?=getPath('/agent/index')?>" >
+                        <span>情报聚合</span>
+                    </a>
+                </li>
+                <li class="treeview <?=isActive(['/share/index'])?>"
+                    ng-if="menu_list.intelligence_share">
+                    <a href="<?=getPath('/share/index')?>">
+                        <span>情报共享</span>
+                    </a>
+                </li>
+                <li class="treeview <?=isActive(['/intelligence/source-management'])?>"
+                    ng-if="menu_list.intelligence_sourceAdmin">
+                    <a href="<?=getPath('/intelligence/source-management')?>" >
+                        <span>情报源管理</span>
+                    </a>
+                </li>
+                <li class="treeview <?=isActive(['/search/apt-lib'])?>"
+                    ng-if="menu_list.intelligence_apt">
+                    <a href="<?=getPath('/search/apt-lib')?>" >
+                        <span>APT武器库</span>
+                    </a>
+                </li>
+            </ul>
         </li>
         <!-- 资产 -->
-        <li role="presentation" class="dropdown hover_li_title <?=isActive(['/assets/asset-management', '/assets/asset-risky', '/assets/details', '/assets/vehicle', '/assets/accessory'])?>" ng-if="menu_list.assets">
-            <a class="dropdown-toggle nav_li_a" ng-click="get_Path(54)">
-            <i class="fa fa-database"></i>
-                 资产
+        <li role="presentation" class="dropdown hover_li_title <?=isActive(['/assets/asset-management', '/assets/asset-risky', '/assets/details'])?>" ng-if="menu_list.assets">
+            <a class="dropdown-toggle nav_li_a" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                aria-expanded="false">
+                <i class="fa fa-database"></i> 资产<span class="caret"></span>
             </a>
+            <ul class="dropdown-menu" >
+                <li class="treeview <?=isActive(['/assets/asset-management'])?>"
+                    ng-if="menu_list.assets_admin">
+                    <a href="<?=getPath('/assets/asset-management')?>" >
+                        <span>资产管理</span>
+                    </a>
+                </li>
+                <li class="treeview <?=isActive(['/assets/asset-risky'])?>"
+                    ng-if="menu_list.assets_risk">
+                    <a href="<?=getPath('/assets/asset-risky')?>" >
+                        <span>受影响资产</span>
+                    </a>
+                </li>
+            </ul>
         </li>
         <!-- 预警 -->
-        <li role="presentation" class="dropdown hover_li_title <?=isActive(['/alert/index', '/alert/loophole', '/alert/darknet', '/alert/loophole-detail', '/vehiclealert/index', '/vehiclealert/detail'])?>" ng-if="menu_list.warning">
-            <a class="dropdown-toggle nav_li_a" ng-click="get_Path(77)">
-                <i class="fa fa-heartbeat"></i> 预警
+        <li role="presentation" class="dropdown hover_li_title <?=isActive(['/alert/index', '/alert/loophole', '/alert/darknet', '/alert/loophole-detail'])?>" ng-if="menu_list.warning">
+            <a class="dropdown-toggle nav_li_a"  data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                aria-expanded="false">
+                <i class="fa fa-heartbeat"></i> 预警<span class="caret"></span>
             </a>
+            <ul class="dropdown-menu" >
+                <li class="treeview <?=isActive(['/alert/index'])?>"
+                    ng-if="menu_list.warning_threat">
+                    <a href="<?=getPath('/alert/index')?>" >
+                        <span>威胁预警</span>
+                    </a>
+                </li>
+                <li class="treeview <?=isActive(['/alert/loophole'])?>"
+                    ng-if="menu_list.warning_loophole">
+                    <a href="<?=getPath('/alert/loophole')?>" >
+                        <span>漏洞预警</span>
+                    </a>
+                </li>
+                <li class="treeview <?=isActive(['/alert/darknet'])?>"
+                    ng-if="menu_list.warning_drakNet">
+                    <a href="<?=getPath('/alert/darknet')?>">
+                        <span>暗网预警</span>
+                    </a>
+                </li>
+            </ul>
         </li>
         <!-- 报表 -->
         <li role="presentation" class="dropdown hover_li_title <?=isActive(['/report/index', '/report/send'])?>" ng-if="menu_list.report">
-            <a class="dropdown-toggle nav_li_a"  ng-click="get_Path(127)">
-                <i class="fa fa-area-chart"></i> 报表
+            <a class="dropdown-toggle nav_li_a"  data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                aria-expanded="false">
+                <i class="fa fa-area-chart"></i>报表<span class="caret"></span>
             </a>
+            <ul class="dropdown-menu" >
+                <li class="treeview <?=isActive(['/report/index'])?>"
+                    ng-if="menu_list.report_creat">
+                    <a href="<?=getPath('/report/index')?>">
+                        <span>报表生成</span>
+                    </a>
+                </li>
+                <li class="treeview <?=isActive(['/report/send'])?>" ng-if="menu_list.report_send">
+                    <a href="<?=getPath('/report/send')?>" >
+                        <span>报表发送</span>
+                    </a>
+                </li>
+            </ul>
         </li>
         <!-- 设置 -->
-        <li role="presentation" class="dropdown hover_li_title <?=isActive(['/seting/network', '/seting/systemnotice', '/seting/custom-information-search', '/seting/centralmanager', '/seting/label-manage', '/seting/user', '/seting/log', '/api/index', '/seting/special-intelligence', '/seting/loophole-intelligence', '/seting/base-intelligence','/user/adduser-page','/user/addrole-page'])?> " ng-if="menu_list.set">
-            <a class="dropdown-toggle nav_li_a"  ng-click="get_Path(93)">
-                <i class="fa fa-cog"></i> 配置
+        <li role="presentation" class="dropdown hover_li_title <?=isActive(['/seting/network', '/seting/systemnotice', '/seting/custom-information-search', '/seting/centralmanager', '/seting/user', '/seting/log', '/api/index'])?> " ng-if="menu_list.set">
+            <a class="dropdown-toggle nav_li_a"  data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                aria-expanded="false">
+                <i class="fa fa-cog"></i>设置<span class="caret"></span>
             </a>
+            <ul class="dropdown-menu">
+                <li class="treeview <?=isActive(['/seting/network'])?>" ng-if="menu_list.set_sys">
+                    <a href="<?=getPath('/seting/network')?>" >
+                        <span>网络配置</span>
+                    </a>
+                </li>
+                <li class="treeview <?=isActive(['/seting/systemnotice'])?>"
+                    ng-if="menu_list.set_notice">
+                    <a href="<?=getPath('/seting/systemnotice')?>" >
+                        <span>威胁通知</span>
+                    </a>
+                </li>
+                <li class="treeview <?=isActive(['/seting/custom-information-search'])?>"
+                    ng-if="menu_list.set_loopholeRelation">
+                    <a href="<?=getPath('/seting/custom-information-search')?>">
+                        <span>漏洞关联</span>
+                    </a>
+                </li>
+                <li class="treeview <?=isActive(['/seting/centralmanager'])?>"
+                    ng-if="menu_list.set_admin">
+                    <a href="<?=getPath('/seting/centralmanager')?>">
+                        <span>集中管理</span>
+                    </a>
+                </li>
+                <li class="treeview <?=isActive(['/seting/user'])?>" ng-if="menu_list.set_user">
+                    <a href="<?=getPath('/seting/user')?>" >
+                        <span>账号管理</span>
+                    </a>
+                </li>
+                <li class="treeview <?=isActive(['/seting/log'])?>" ng-if="menu_list.set_log">
+                    <a href="<?=getPath('/seting/log')?>" >
+                        <span>审计日志</span>
+                    </a>
+                </li>
+                <li class="treeview <?=isActive(['/api/index'])?>" ng-if="menu_list.api">
+                    <a href="<?=getPath('/api/index')?>" >
+                        <span>情报API</span>
+                    </a>
+                </li>
+            </ul>
         </li>
     </ul>
 </div>

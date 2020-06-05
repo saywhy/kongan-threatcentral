@@ -1,6 +1,5 @@
 .log_container {
-  padding: 24px 36px;
-  padding-top: 0;
+  padding: 36px 48px;
 }
 
 .log_box {
@@ -42,6 +41,24 @@
 #timerange {
   width: 330px;
   padding-left: 36px;
+}
+
+.daterangepicker {
+  width: auto;
+  padding-top: 10px;
+  transform: translateX(0);
+  /* left: 300px !important;
+  top: 225px !important; */
+}
+
+.daterangepicker .calendar th,
+.daterangepicker .calendar td {
+  width: auto;
+}
+
+.daterangepicker td.active,
+.daterangepicker td.active:hover {
+  background-color: #0070ff;
 }
 
 .btn-success,
@@ -89,29 +106,4 @@
   white-space: nowrap;
   text-overflow: ellipsis;
   text-align: center;
-}
-
-.log_time {
-  display: inline-block;
-  height: 42px;
-  width: 220px;
-  margin-right: 16px;
-  position: relative;
-}
-
-.time_picker {
-  height: 42px;
-  width: 220px;
-  margin-right: 16px;
-  border: 1px solid #ececec;
-  border-radius: 4px;
-  padding-left: 20px;
-}
-
-.log_time_icon {
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  top: 11px;
-  right: 12px;
 }

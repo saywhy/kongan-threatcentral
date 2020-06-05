@@ -73,7 +73,7 @@ $this->title = '预警详情';
     .detail_top_bom_p {
         height: 58px;
         line-height: 58px;
-        white-space: nowrap;
+         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
     }
@@ -168,10 +168,9 @@ $this->title = '预警详情';
         color: #666666;
         line-height: 20px;
     }
-
-    .detail_bom_nav>li.active {
-        border-top: 3px solid #0070FF;
-        border-radius: 4px;
+       .detail_bom_nav>li.active{
+         border-top: 3px solid #0070FF;
+    border-radius: 4px;
     }
 
     .domain_table tr:nth-child(odd) {
@@ -201,45 +200,39 @@ $this->title = '预警详情';
         text-overflow: ellipsis;
         text-align: center;
     }
-
-    .domain_p {
-        height: 48px;
-        line-height: 48px;
-        padding-left: 26px;
-        font-size: 16px;
-        color: #333333;
+    .domain_p{
+            height: 48px;
+    line-height: 48px;
+    padding-left: 26px;
+    font-size: 16px;
+color: #333333;
     }
-
-    .title_info_box {
-        line-height: 50px;
+    .title_info_box{
+        line-height:50px;
     }
-
-    .title_info_box p {
-        overflow: hidden;
+      .title_info_box p{
+          overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
     }
-
-    .title_info_title {
+    .title_info_title{
         font-size: 16px;
-        color: #333333;
+color: #333333;
     }
-
-    .title_info_content {
-        font-size: 16px;
-        color: #666666;
+    .title_info_content{
+font-size: 16px;
+color: #666666;
     }
-
-    .zeromodal-container {
+    .zeromodal-container{
         border-radius: 6px;
     }
+    .modal-title{
+    border-left: 3px solid #0070FF;
+    padding-left: 6px;
+    }
 
-    /* .modal-title {
-        border-left: 3px solid #0070FF;
-        padding-left: 6px;
-    } */
 </style>
-<section class="detail_content" ng-app="myApp" ng-controller="myCtrl" style="margin-bottom: 40px;" ng-cloak>
+<section class="detail_content" ng-app="myApp" ng-controller="myCtrl" ng-cloak>
     <div class="detail_top">
         <!-- 上 -->
         <div class="detail_top_top">
@@ -248,9 +241,12 @@ $this->title = '预警详情';
                 <img src="/images/alert/top_detail.png" style="cursor:pointer;" ng-click="detail_title()" alt="">
             </div>
             <div class="detail_top_top_right">
-                <button class="detail_top_top_right_btn" ng-click="search_extend(detail.indicator)">
+
+		<button class="detail_top_top_right_btn" ng-if="set_true&&lookup_license"
+                    ng-click="search_extend(detail.indicator)">
                     扩展查询
                 </button>
+
             </div>
         </div>
         <!-- 下 -->
@@ -271,8 +267,7 @@ $this->title = '预警详情';
                 <p class="detail_top_bom_p">
                     <img src="/images/alert/top_3.png" alt="">
                     <span class="detail_top_bom_title">情报来源:</span>
-                    <span class="detail_top_bom_content"
-                        title="{{detail.attr.sources[0]}}">{{detail.attr.sources[0]}}</span>
+                    <span class="detail_top_bom_content"title="{{detail.attr.sources[0]}}" >{{detail.attr.sources[0]}}</span>
                 </p>
                 <p class="detail_top_bom_p">
                     <img src="/images/alert/top_4.png" alt="">
@@ -362,10 +357,10 @@ $this->title = '预警详情';
                 </ul>
             </div>
             <div id="domain" class="tab-pane">
-                <p class="domain_p">{{detail.attr.hoohoolab_domains}} </p>
+               <p class="domain_p">{{detail.attr.hoohoolab_domains}} </p>
             </div>
             <div id="file" class="tab-pane">
-                <table class="table ng-cloak table_th domain_table">
+                <table class="table ng-cloak domain_table">
                     <tr style="font-size: 16px;color: #333;">
                         <th style="font-weight: normal;">THREAT</th>
                         <th style="font-weight: normal;">MD5</th>
@@ -387,15 +382,14 @@ $this->title = '预警详情';
     <div style="display: none;" id="title_hideenBox">
         <div id="title_info">
             <div class="row">
-                <div class="col-md-6 title_info_box">
-                    <p>
+                <div class="col-md-6 title_info_box" >
+                    <p >
                         <span class="title_info_title">资产分组：</span>
                         <span class="title_info_content">{{alert.company}}</span>
                     </p>
-                    <p>
-                        <span class="title_info_title">关联域名：</span>
-                        <span class="title_info_content"
-                            title="{{detail.attr.hoohoolab_domains}}">{{detail.attr.hoohoolab_domains}}</span>
+                    <p >
+                         <span class="title_info_title">关联域名：</span>
+                        <span class="title_info_content" title="{{detail.attr.hoohoolab_domains}}">{{detail.attr.hoohoolab_domains}}</span>
                     </p>
                 </div>
                 <div class="col-md-6 title_info_box">
@@ -404,7 +398,7 @@ $this->title = '预警详情';
                         <span class="title_info_content">{{alert.asset_status}}</span>
                     </p>
                     <p>
-                        <span class="title_info_title">地理位置：</span>
+                         <span class="title_info_title">地理位置：</span>
                         <span class="title_info_content">{{alert.position}}</span>
                     </p>
                 </div>
@@ -461,6 +455,52 @@ $this->title = '预警详情';
 
     var app = angular.module('myApp', ['ngSanitize']);
     app.controller('myCtrl', function ($scope, $http, $filter) {
+
+	$scope.set_true = false
+        $scope.lookup_license = false
+        //   获取状态设备角色
+        $scope.get_centralmanage_self = function () {
+            var loading = zeroModal.loading(4);
+            $http({
+                method: "get",
+                url: "/site/dev-self"
+            }).then(
+                function successCallback(data) {
+                    zeroModal.close(loading);
+                    $scope.centralmanage_self = data.data.data;
+                    if ($scope.centralmanage_self.role_type == "manage") {
+                        $scope.set_true = true;
+                    }
+                    if ($scope.centralmanage_self.role_type == "branch") {
+                        $scope.set_true = false;
+                    }
+                },
+                function errorCallback(data) {
+                    zeroModal.close(loading);
+                    zeroModal.error(data.data.message);
+                }
+            );
+        };
+
+        //   获取license
+        $scope.get_lookup_license = function () {
+            $http({
+                method: "get",
+                url: "/intelligence/license"
+            }).then(
+                function successCallback(data) {
+                    console.log(data);
+                    $scope.lookup_license = data.data.data.result;
+                },
+                function errorCallback(data) {}
+            );
+        };
+
+        $scope.get_centralmanage_self();
+        $scope.get_lookup_license();
+
+
+
         $scope.alert = alert;
         $scope.detail = alert.data;
         console.log($scope.detail);
@@ -625,55 +665,44 @@ $this->title = '预警详情';
             });
         };
         //   扩展查询
-        $scope.search_extend = function (obj) {
-            console.log(obj);
-            var loading = zeroModal.loading(4);
-            $http({
-                method: "get",
-                url: "/intelligence/extension",
-                params: {
-                    indicator: obj
-                }
-            }).then(
-                function (data) {
-                    zeroModal.close(loading);
-                    if (data.data.data == null) {
-                        zeroModal.error("没有查询到扩展信息");
-                        return false;
-                    }
-                    if (data.data.data.result == null) {
-                        zeroModal.error("没有查询到扩展信息");
-                        return false;
-                    }
-                    for (var k in data.data.data.result) {
-                        switch (k) {
-                            case "DomainGeneralInfo":
-                                sessionStorage . setItem("DomainGeneralInfo", JSON . stringify(data.data.data));
-                                //   window.location.href = "/ExtendedQuery.html#/domain?name=" + obj;
-                                window.open("/ExtendedQuery.html#/domain?name=" + obj)
-                                break;
-                            case "FileGeneralInfo":
-                             sessionStorage . setItem("FileGeneralInfo", JSON . stringify(data.data.data));
-                                //   window.location.href = "/ExtendedQuery.html#/hash?name=" + obj;
-                                window.open("/ExtendedQuery.html#/hash?name=" + obj)
-                                break;
-                            case "IpGeneralInfo":
-                                 sessionStorage . setItem("IpGeneralInfo", JSON . stringify(data.data.data));
-                                //   window.location.href = "/ExtendedQuery.html#/ip?name=" + obj;
-                                window.open("/ExtendedQuery.html#/ip?name=" + obj)
-                                break;
-                            case "UrlGeneralInfo":
-                               sessionStorage . setItem("UrlGeneralInfo", JSON . stringify(data.data.data));
-                                //   window.location.href = "/ExtendedQuery.html#/url?name=" + obj;
-                                window.open("/ExtendedQuery.html#/url?name=" + obj)
-                                break;
-                            default:
-                                break;
-                        }
-                    }
-                },
-                function () {}
-            );
-        };
+  $scope.search_extend = function(obj) {
+    console.log(obj);
+    var loading = zeroModal.loading(4);
+    $http({
+      method: "get",
+      url: "/intelligence/extension",
+      params: {
+        indicator: obj
+      }
+    }).then(
+      function(data) {
+        console.log(data.data.data.result);
+        zeroModal.close(loading);
+        for (var k in data.data.data.result) {
+          switch (k) {
+            case "DomainGeneralInfo":
+            //   window.location.href = "/ExtendedQuery.html#/domain?name=" + obj;
+            window.open("/ExtendedQuery.html#/domain?name=" + obj)
+              break;
+            case "FileGeneralInfo":
+            //   window.location.href = "/ExtendedQuery.html#/hash?name=" + obj;
+                window.open("/ExtendedQuery.html#/hash?name=" + obj)
+              break;
+            case "IpGeneralInfo":
+            //   window.location.href = "/ExtendedQuery.html#/ip?name=" + obj;
+                window.open("/ExtendedQuery.html#/ip?name=" + obj)
+              break;
+            case "UrlGeneralInfo":
+            //   window.location.href = "/ExtendedQuery.html#/url?name=" + obj;
+               window.open("/ExtendedQuery.html#/url?name=" + obj)
+              break;
+            default:
+              break;
+          }
+        }
+      },
+      function() {}
+    );
+  };
     });
 </script>

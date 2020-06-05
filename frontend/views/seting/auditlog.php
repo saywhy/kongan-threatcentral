@@ -1,4 +1,7 @@
 <?php
+use yii\helpers\Url;
+use yii\grid\GridView;
+use yii\widgets\LinkPager;
 /* @var $this yii\web\View */
 
 $this->title = '审计日志';
@@ -39,7 +42,7 @@ $this->title = '审计日志';
                                     </div>
                                 </div>
                                 <div class="row margin">
-                                    <table class="table table-hover table_th ng-cloak" style="table-layout: fixed">
+                                    <table class="table table-hover ng-cloak" style="table-layout: fixed">
                                         <tr>
                                             <th style="width:80px">序号</th>
                                             <th style="width:150px">时间</th>
@@ -56,7 +59,7 @@ $this->title = '审计日志';
                                         </tr>
                                     </table>
                                     <!-- angularjs分页 -->
-                                    <div style="padding: 10px;">
+                                    <div style="border-top: 1px solid #f4f4f4;padding: 10px;">
                                         <em>共有
                                             <span ng-bind="pages.count"></span>条</em>
                                         <!-- angularjs分页 -->
