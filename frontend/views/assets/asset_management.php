@@ -85,7 +85,7 @@ $this->title = '资产管理';
     }
 
     .input_box {
-        border: 1px solid #ECECEC;
+        border: 1px solid #D1D1D1;
         border-radius: 5px;
         width: 210px;
         height: 42px;

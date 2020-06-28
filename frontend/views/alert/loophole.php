@@ -142,7 +142,7 @@ $this->title = '漏洞预警';
         overflow-y: auto;
         position: absolute;
         top: 45px;
-        border: 1px solid #ECECEC;
+        border: 1px solid #D1D1D1;
         z-index: 999;
         background: #fff;
         padding: 5px;
@@ -254,7 +254,7 @@ $this->title = '漏洞预警';
     }
 
     .alert_search_input {
-        border: 1px solid #ECECEC;
+        border: 1px solid #D1D1D1;
         border-radius: 5px;
         height: 42px;
         width: 180px;
@@ -496,7 +496,7 @@ $this->title = '漏洞预警';
         overflow-y: auto;
         position: absolute;
         top: 45px;
-        border: 1px solid #ECECEC;
+        border: 1px solid #D1D1D1;
         z-index: 999;
         background: #fff;
         padding: 5px;

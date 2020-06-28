@@ -102,7 +102,7 @@
 
 .zeromodal-btn-primary {
   color: #fff;
-  background-color: #2196f3;
+  background-color: #4155d0;
   border: none;
 }
 
@@ -442,8 +442,8 @@
 .zeromodal-title1 {
   width: 100%;
   text-align: center;
-  color: #575757;
-  font-size: 20px;
+  color: #333;
+  font-size: 16px;
   font-weight: bold;
   padding: 8px 0;
 }

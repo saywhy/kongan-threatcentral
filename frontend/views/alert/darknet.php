@@ -167,7 +167,7 @@ $this->title = '暗网预警';
     }
 
     .search_input {
-        border: 1px solid #ECECEC;
+        border: 1px solid #D1D1D1;
         border-radius: 5px;
         height: 42px;
         width: 210px;
@@ -254,7 +254,7 @@ $this->title = '暗网预警';
         overflow-y: auto;
         position: absolute;
         top: 43px;
-        border: 1px solid #ECECEC;
+        border: 1px solid #D1D1D1;
         z-index: 999;
         background: #fff;
         padding: 5px;
@@ -307,7 +307,7 @@ $this->title = '暗网预警';
 
     .mode_top_input {
         height: 32px;
-        border: 1px solid #ECECEC;
+        border: 1px solid #D1D1D1;
            border-radius: 5px;
         font-size: 14px;
         color: #333333;
@@ -317,7 +317,7 @@ $this->title = '暗网预警';
 
     .mode_mid_input {
         height: 32px;
-        border: 1px solid #ECECEC;
+        border: 1px solid #D1D1D1;
             border-radius: 5px;
         font-size: 14px;
         color: #333333;

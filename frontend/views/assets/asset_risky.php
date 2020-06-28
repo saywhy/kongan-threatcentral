@@ -85,7 +85,7 @@ $this->title = '受影响资产';
     }
 
     .input_box {
-        border: 1px solid #ECECEC;
+        border: 1px solid #D1D1D1;
         border-radius: 5px;
         width: 210px;
         height: 42px;
@@ -195,7 +195,7 @@ $this->title = '受影响资产';
         left: 0;
     }
     .input_demo{
-  border: 1px solid #ECECEC;
+  border: 1px solid #D1D1D1;
         border-radius: 5px;
         width: 210px;
         min-height: 42px;

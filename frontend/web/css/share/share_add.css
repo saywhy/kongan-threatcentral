@@ -124,7 +124,7 @@
 .ioc_box_textarea {
   resize: none;
   margin-top: 15px;
-  border: 1px solid #ececec;
+  border: 1px solid #D1D1D1;
   width: 100%;
   min-height: 160px;
   padding: 24px;
@@ -175,7 +175,7 @@
   font-size: 18px;
   color: #333333;
   /* border-left: 3px solid #4155d0; */
-  border-radius: 5px;
+  border-radius: 2px;
   height: 20px;
   font-weight: 500;
 }
@@ -269,7 +269,7 @@ th {
 .input_box_add {
   width: 80px;
   text-align: center;
-  border: 1px solid #ececec;
+  border: 1px solid #D1D1D1;
   border-radius: 5px;
   height: 30px;
 }

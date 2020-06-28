@@ -131,13 +131,13 @@ $this->title = '情报查询';
 
     .info_top_input {
         background: #FFFFFF;
-        border: 1px solid #ececec;
-        padding-left: 16px;
+        border: 1px solid #D1D1D1;
+        padding-left: 14px;
         border-radius: 5px;
         width: 624px;
         height: 48px;
-        font-size: 16px;
-        color: #333333;
+        font-size: 14px;
+        color: #666;
         float: left;
     }
 

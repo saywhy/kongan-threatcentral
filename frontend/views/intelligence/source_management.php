@@ -93,7 +93,7 @@ $this->title = '情报源管理';
     }
 
     .alert_search_input {
-        border: 1px solid #ECECEC;
+        border: 1px solid #D1D1D1;
         border-radius: 5px;
         height: 42px;
         width: 210px;

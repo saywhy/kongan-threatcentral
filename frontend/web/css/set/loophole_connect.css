@@ -24,7 +24,7 @@
 }
 
 .input_box {
-  border: 1px solid #ececec;
+  border: 1px solid #D1D1D1;
   border-radius: 5px;
   width: 320px;
   height: 42px;
@@ -87,7 +87,7 @@
   color: #333333;
   border-left: 3px solid #4155d0;
   padding-left: 6px;
-  border-radius: 5px;
+  border-radius: 2px;
   height: 20px;
   font-weight: 500;
 }

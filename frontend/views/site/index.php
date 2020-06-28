@@ -151,6 +151,7 @@ $this->title = '概览';
         font-size: 14px;
         padding: 0;
         height: 30px;
+       font-weight: bold;
         color: #333333;
         line-height: 20px;
     }
@@ -270,8 +271,9 @@ $this->title = '概览';
     }
 
     .box_title_text {
-        font-size: 20px;
+        font-size: 16px;
         color: #333;
+     font-weight: bold
     }
 
     .title_box {
@@ -383,13 +385,12 @@ $this->title = '概览';
     input:focus {
         outline: none;
         outline-offset: 0px;
-        border: 1px solid #0070FF;
+        border: 1px solid #D1D1D1;
     }
 
     .slect_input {
-        border: 1px solid #ECECEC;
-        box-shadow: inset 0 0 4px 0 rgba(0, 0, 0, 0.24);
-        border-radius: 4px;
+        border: 1px solid #D1D1D1;
+        border-radius: 5px;
         height: 42px;
         width: 120px;
         float: right
