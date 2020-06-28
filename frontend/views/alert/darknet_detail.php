@@ -16,7 +16,7 @@ $this->title = '暗网详情';
         height: 116px;
         padding: 0 24px;
         background: #FFFFFF;
-        border-radius: 8px;
+        border-radius: 5px;
     }
 
     .darknet_box_top_p {
@@ -42,7 +42,7 @@ $this->title = '暗网详情';
         margin-top: 36px;
         background: #FFFFFF;
         box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
-        border-radius: 6px;
+        border-radius: 5px;
         min-height: 200px;
     }
 

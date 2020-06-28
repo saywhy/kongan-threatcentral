@@ -10,7 +10,7 @@ $this->title = '情报查询';
         margin: 36px 48px;
         background: #fff;
         min-height: 200px;
-        border-radius: 6px;
+        border-radius: 5px;
     }
 
     .detail_bom_nav {
@@ -34,7 +34,7 @@ $this->title = '情报查询';
     }
 
     .detail_bom_nav a:hover {
-        color: #409eff !important;
+        color: #4155d0 !important;
     }
 
     .detail_bom_nav>li>a:hover {
@@ -43,13 +43,13 @@ $this->title = '情报查询';
     }
 
     .detail_bom_nav>li.active>a {
-        color: #409eff !important;
+        color: #4155d0 !important;
         border: none !important;
     }
 
     .detail_bom_nav>li.active {
-        border-top: 3px solid #0070FF;
-        border-radius: 4px;
+        border-top: 3px solid #4155d0;
+        border-radius: 5px;
     }
 
     .detail_bom_ul,
@@ -66,7 +66,7 @@ $this->title = '情报查询';
     }
 
     .detail_bom_ul>li:nth-child(even) {
-        background: #EEF6FF;
+        background: #4155d0;
         line-height: 48px;
         padding: 0 26px;
     }
@@ -89,7 +89,7 @@ $this->title = '情报查询';
     }
 
     .domain_table tr:nth-child(even) {
-        background: #eef6ff;
+        background: #EEF6FF;
 
     }
 
@@ -133,7 +133,7 @@ $this->title = '情报查询';
         background: #FFFFFF;
         border: 1px solid #ececec;
         padding-left: 16px;
-        border-radius: 4px;
+        border-radius: 5px;
         width: 624px;
         height: 48px;
         font-size: 16px;
@@ -142,13 +142,13 @@ $this->title = '情报查询';
     }
 
     .info_top_btn {
-        background: #0070FF;
-        border-radius: 0 3px 3px 0;
+        background: #4155d0;
+        border-radius: 0 5px 5px 0;
         width: 56px;
         height: 48px;
         float: left;
         margin-left: -3px;
-        border: 1px solid #0070ff;
+        border: 1px solid #4155d0;
     }
 
     .info_bom {
@@ -178,8 +178,8 @@ $this->title = '情报查询';
     }
 
     .info_bom_top_btn {
-        background: #0070FF;
-        border-radius: 4px;
+        background: #4155d0;
+        border-radius: 5px;
         font-size: 14px;
         color: #FFFFFF;
         float: left;
@@ -188,20 +188,20 @@ $this->title = '情报查询';
     }
 
     .info_bom_top_cel {
-        border: 1px solid #0070FF;
-        border-radius: 4px;
+        border: 1px solid #4155d0;
+        border-radius: 5px;
         font-size: 14px;
         float: right;
-        color: #0070FF;
+        color: #4155d0;
         height: 42px;
         width: 124px;
     }
 
     .info_bom_top_cel_set{
-    border: 1px solid #0070FF;
-    border-radius: 4px;
+    border: 1px solid #4155d0;
+    border-radius: 5px;
     font-size: 14px;
-    color: #0070FF;
+    color: #4155d0;
     height: 42px;
     transform: translateX(-50%);
     position: absolute;
@@ -262,19 +262,19 @@ $this->title = '情报查询';
     }
 
     .loop_id {
-        color: #0070FF;
+        color: #4155d0;
     }
     .btn_download{
         width: 80px;
     height: 30px;
-    border-radius: 4px;
-    background: #0070ff;
+    border-radius: 5px;
+    background: #4155d0;
     color: #fff;
     margin-left: 5px;
     font-size: 12px;
     }
     .poc_btn{
-    border-radius: 4px;
+    border-radius: 5px;
     background: #ececec;
     color: #fff;
     }
@@ -589,4 +589,3 @@ $this->title = '情报查询';
 
 </section>
 <script src="/js/controllers/search.js"></script>
-

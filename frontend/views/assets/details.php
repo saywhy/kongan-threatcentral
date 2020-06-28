@@ -10,7 +10,7 @@ $this->title = '资产信息';
 
     .details_content_box {
         background: #FFFFFF;
-        border-radius: 6px;
+        border-radius: 5px;
         min-height: 200px;
     }
 
@@ -35,7 +35,7 @@ $this->title = '资产信息';
     }
 
     .detail_bom_nav a:hover {
-        color: #409eff !important;
+        color: #4155d0 !important;
     }
 
     .detail_bom_nav>li>a:hover {
@@ -44,13 +44,13 @@ $this->title = '资产信息';
     }
 
     .detail_bom_nav>li.active>a {
-        color: #409eff !important;
+        color: #4155d0 !important;
         border: none !important;
     }
 
     .detail_bom_nav>li.active {
-        border-top: 3px solid #0070FF;
-        border-radius: 4px;
+        border-top: 3px solid #EEF6FF;
+        border-radius: 5px;
     }
 
     .domain_table tr:nth-child(odd) {
@@ -58,7 +58,7 @@ $this->title = '资产信息';
     }
 
     .domain_table tr:nth-child(even) {
-        background: #eef6ff;
+        background: #EEF6FF;
 
     }
 

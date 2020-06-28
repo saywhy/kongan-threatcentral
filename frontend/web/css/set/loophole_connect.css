@@ -5,7 +5,7 @@
 .loop_connect_box {
   background: #ffffff;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
-  border-radius: 6px;
+  border-radius: 5px;
   min-height: 200px;
 }
 
@@ -25,7 +25,7 @@
 
 .input_box {
   border: 1px solid #ececec;
-  border-radius: 4px;
+  border-radius: 5px;
   width: 320px;
   height: 42px;
   margin-right: 24px;
@@ -35,22 +35,22 @@
 .search_btn {
   width: 124px;
   height: 42px;
-  background: #0070ff;
-  border-radius: 4px;
+  background: #4155d0;
+  border-radius: 5px;
   color: #fff;
 }
 
 .add_btn {
   width: 124px;
   height: 42px;
-  border: 1px solid #0070ff;
-  border-radius: 4px;
-  color: #0070ff;
+  border: 1px solid #4155d0;
+  border-radius: 5px;
+  color: #4155d0;
   float: right;
 }
 
 .domain_table tr:nth-child(odd) {
-  background: #eef6ff;
+  background: #EEF6FF;
 }
 
 .domain_table tr:nth-child(even) {
@@ -78,16 +78,16 @@
 
 .zeromodal-container {
   padding: 36px;
-  border-radius: 8px;
+  border-radius: 5px;
 }
 
 .zeromodal-header {
   margin: 0;
   font-size: 18px;
   color: #333333;
-  border-left: 3px solid #0070ff;
+  border-left: 3px solid #4155d0;
   padding-left: 6px;
-  border-radius: 2px;
+  border-radius: 5px;
   height: 20px;
   font-weight: 500;
 }
@@ -114,12 +114,12 @@
 
 .input_box_bottom:focus {
   border: none;
-  border-bottom: 1px solid #0070ff;
+  border-bottom: 1px solid #4155d0;
 }
 
 .save_btn {
-  background: #0070ff;
-  border-radius: 4px;
+  background: #4155d0;
+  border-radius: 5px;
   color: #fff;
   width: 124px;
   height: 40px;
@@ -129,9 +129,9 @@
   width: 124px;
   height: 40px;
   margin-left: 36px;
-  border: 1px solid #0070ff;
-  border-radius: 4px;
-  color: #0070ff;
+  border: 1px solid #4155d0;
+  border-radius: 5px;
+  color: #4155d0;
 }
 
 .img_icon {

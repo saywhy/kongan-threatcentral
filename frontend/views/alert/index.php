@@ -175,7 +175,7 @@ $this->title = '威胁预警';
 
     .alert_search_input {
         border: 1px solid #ECECEC;
-        border-radius: 4px;
+        border-radius: 5px;
         height: 42px;
         width: 185px;
         padding-left: 34px;
@@ -186,12 +186,12 @@ $this->title = '威胁预警';
     input:focus {
         outline: none;
         outline-offset: 0px;
-        border: 1px solid #0070FF;
+        border: 1px solid #4155d0;
     }
 
     .button_search {
-        background: #0070FF;
-        border-radius: 4px;
+        background: #4155d0;
+        border-radius: 5px;
         height: 42px;
         width: 124px;
         color: #fff;
@@ -199,11 +199,11 @@ $this->title = '威胁预警';
     }
 
     .button_down {
-        border: 1px solid #0070FF;
-        border-radius: 4px;
+        border: 1px solid #4155d0;
+        border-radius: 5px;
         height: 42px;
         width: 124px;
-        color: #0070FF;
+        color: #4155d0;
     }
 
     button:focus {
@@ -228,20 +228,20 @@ $this->title = '威胁预警';
     }
 
     .btn_look {
-        border-radius: 4px;
+        border-radius: 5px;
         width: 68px;
         height: 28px;
         line-height: 28px;
         font-size: 12px;
         color: #fff;
-        background: #64A8FF;
+        background: #4155d0;
         padding: 0;
         position: relative;
     }
 
     .btn_look_closed {
         background: #F2F2F2;
-        border-radius: 4px;
+        border-radius: 5px;
         font-size: 12px;
         width: 68px;
         height: 28px;
@@ -258,7 +258,7 @@ $this->title = '威胁预警';
         width: 68px;
         background: #FFFFFF;
         box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.16);
-        border-radius: 4px;
+        border-radius: 5px;
         font-size: 12px;
         color: #333;
         left: -1px;
@@ -270,7 +270,7 @@ $this->title = '威胁预警';
     }
 
     .td_li:hover {
-        background: #0070FF;
+        background: #4155d0;
         color: #fff;
         cursor: pointer;
     }
@@ -308,15 +308,15 @@ $this->title = '威胁预警';
     .select_choose_type {
         width: 114px;
         height: 36px;
-        border-radius: 4px;
-        background-color: #64A8FF !important;
+        border-radius: 5px;
+        background-color: #4155d0 !important;
         color: #fff;
         border: none;
     }
     .select_choose_type_true {
         width: 114px;
         height: 36px;
-        border-radius: 4px;
+        border-radius: 5px;
         background-color: #F2F2F2 !important;
         color: #bbb;
         border: none;
@@ -328,7 +328,7 @@ $this->title = '威胁预警';
     }
 
     .cel_btn {
-          border-radius: 4px;
+          border-radius: 5px;
     width: 104px;
     height: 36px;
     font-size: 16px;
@@ -336,11 +336,11 @@ $this->title = '威胁预警';
     left: 48px;
     top: 50%;
     transform: translateY(-50%);
-    color: #0070FF;
-border: 1px solid #0070FF;
+    color: #4155d0;
+border: 1px solid #4155d0;
     }
     .cel_btn_true {
-          border-radius: 4px;
+          border-radius: 5px;
     width: 104px;
     height: 36px;
     font-size: 16px;
@@ -354,8 +354,8 @@ border: 1px solid #0070FF;
     .ok_btn {
            width: 104px;
     height: 36px;
-    background: #0070FF;
-    border-radius: 4px;
+    background: #4155d0;
+    border-radius: 5px;
     color: #fff;
     position: absolute;
     right: 36px;
@@ -367,7 +367,7 @@ border: 1px solid #0070FF;
     height: 36px;
     border:none;
    background: #F2F2F2;
-    border-radius: 4px;
+    border-radius: 5px;
     color: #BBBBBB;
     position: absolute;
     right: 36px;
@@ -384,9 +384,9 @@ border: 1px solid #0070FF;
         z-index: 3;
         color: #fff;
         cursor: default;
-        background: #0070FF;
-        border-radius: 4px;
-        border-color: #0070FF;
+        background: #4155d0;
+        border-radius: 5px;
+        border-color: #4155d0;
     }
 
     .search_icon_box {
@@ -421,7 +421,7 @@ border: 1px solid #0070FF;
 
     .li_hover:hover {
         cursor: pointer;
-        background-color: #0070FF;
+        background-color: #4155d0;
         color: #fff;
         border-radius: 3px;
     }

@@ -203,7 +203,7 @@ p {
   width: 100%;
   background: #ffffff;
   box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.16);
-  border-radius: 8px;
+  border-radius: 5px;
 }
 
 .apt_container_bom_item_box_img {
@@ -220,7 +220,7 @@ p {
 
 .card_info_title {
   font-size: 20px;
-  color: #0070ff;
+  color: #4155d0;
   line-height: 24px;
 }
 
@@ -256,8 +256,8 @@ p {
 }
 
 .apt_header_select_box {
-  border: 1px solid #0070ff;
-  border-radius: 4px;
+  border: 1px solid #4155d0;
+  border-radius: 5px;
   min-height: 42px;
   padding: 0 8px;
   padding-left: 40px;
@@ -275,13 +275,13 @@ p {
 
 .search_tag {
   background: #e0eeff;
-  border-radius: 2px;
+  border-radius: 5px;
   padding: 0 10px;
   height: 30px;
   float: left;
   line-height: 30px;
   font-size: 14px;
-  color: #0070ff;
+  color: #4155d0;
   margin: 5px;
 }
 
@@ -325,9 +325,9 @@ p {
   height: 30px;
   line-height: 30px;
   width: 100px;
-  border: 1px solid #0070ff;
-  border-radius: 2px;
-  color: #0070ff;
+  border: 1px solid #4155d0;
+  border-radius: 5px;
+  color: #4155d0;
   min-width: 100px;
   position: absolute;
   right: 0;

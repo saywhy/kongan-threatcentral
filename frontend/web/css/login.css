@@ -10,7 +10,7 @@ body {
   background: #fff;
   color: #555;
   font-size: 14px;
-  font-family: PingFang;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
 }
 
 .login_box {
@@ -41,8 +41,8 @@ label {
 }
 
 input:focus {
-  border-radius: 4px;
-  border: 1px solid #0070ff;
+  border-radius: 5px;
+  border: 1px solid #4155d0;
 }
 
 .login_box_left {
@@ -64,10 +64,6 @@ input:focus {
   padding-left: 36px;
   height: 55px;
   width: 100%;
-}
-
-.logo_img {
-  height: 60px;
 }
 
 .login_box_content {
@@ -103,7 +99,7 @@ input:focus {
   width: 360px;
   height: 42px;
   border: 1px solid #dddddd;
-  border-radius: 4px;
+  border-radius: 5px;
 }
 
 ::-webkit-input-placeholder {
@@ -143,8 +139,8 @@ input:focus {
 
 .login_button {
   margin-top: 30px;
-  background-image: linear-gradient(180deg, #0070ff 0%, #004194 98%);
-  border-radius: 6px;
+  background-image: linear-gradient(180deg, #4155d0 0%, #004194 98%);
+  border-radius: 5px;
   height: 42px;
   width: 360px;
   color: #fff;

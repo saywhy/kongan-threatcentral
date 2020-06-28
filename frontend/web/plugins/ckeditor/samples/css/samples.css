@@ -316,11 +316,11 @@ html {
 }
 .content code,
 .content kbd {
-  -webkit-border-radius: 3px;
+  -webkit-border-radius: 5px;
   -webkit-background-clip: padding-box;
-  -moz-border-radius: 3px;
+  -moz-border-radius: 5px;
   -moz-background-clip: padding;
-  border-radius: 3px;
+  border-radius: 5px;
   background-clip: padding-box;
   padding: 3px 4px;
 }
@@ -411,11 +411,11 @@ html {
 .content input,
 .content select,
 .content textarea:not([class^="cke"]) {
-  -webkit-border-radius: 3px;
+  -webkit-border-radius: 5px;
   -webkit-background-clip: padding-box;
-  -moz-border-radius: 3px;
+  -moz-border-radius: 5px;
   -moz-background-clip: padding;
-  border-radius: 3px;
+  border-radius: 5px;
   background-clip: padding-box;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08);
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08);
@@ -573,11 +573,11 @@ html {
 body a.button-a,
 body button.button-a,
 body input.button-a {
-  -webkit-border-radius: 3px;
+  -webkit-border-radius: 5px;
   -webkit-background-clip: padding-box;
-  -moz-border-radius: 3px;
+  -moz-border-radius: 5px;
   -moz-background-clip: padding;
-  border-radius: 3px;
+  border-radius: 5px;
   background-clip: padding-box;
   font-size: 14px;
   font-size: 0.875rem;
@@ -726,11 +726,11 @@ body input.navigation-b ul li a:hover:hover {
   font-size: 0.75rem;
   line-height: 21.6px;
   line-height: 1.35rem;
-  -webkit-border-radius: 3px;
+  -webkit-border-radius: 5px;
   -webkit-background-clip: padding-box;
-  -moz-border-radius: 3px;
+  -moz-border-radius: 5px;
   -moz-background-clip: padding;
-  border-radius: 3px;
+  border-radius: 5px;
   background-clip: padding-box;
   border-bottom: 3px solid #d4d4d4;
   background: #ebebeb;
@@ -831,11 +831,11 @@ body input.navigation-b ul li a:hover:hover {
   display: inline-block;
   padding: 0.75em 0.25em;
   color: #fff;
-  -webkit-border-radius: 3px;
+  -webkit-border-radius: 5px;
   -webkit-background-clip: padding-box;
-  -moz-border-radius: 3px;
+  -moz-border-radius: 5px;
   -moz-background-clip: padding;
-  border-radius: 3px;
+  border-radius: 5px;
   background-clip: padding-box;
   position: relative;
 }
@@ -962,7 +962,7 @@ body input.navigation-b ul li a:hover:hover {
 }
 .modal {
   padding: 20px;
-  border-radius: 3px;
+  border-radius: 5px;
   background-color: white;
   max-width: 700px;
   -webkit-box-sizing: border-box;
@@ -1431,11 +1431,11 @@ div.toolbarModifier > ul > li ul li[data-type="subgroup"]:first-child {
   border-top: 0;
 }
 div.toolbarModifier > ul > li ul li[data-type="subgroup"] [data-type="button"] {
-  -webkit-border-radius: 3px;
+  -webkit-border-radius: 5px;
   -webkit-background-clip: padding-box;
-  -moz-border-radius: 3px;
+  -moz-border-radius: 5px;
   -moz-background-clip: padding;
-  border-radius: 3px;
+  border-radius: 5px;
   background-clip: padding-box;
   padding: 0 2px;
 }
@@ -1543,11 +1543,11 @@ div.toolbarModifier-hints dl dd:after {
 .toolbarModifier-hints,
 .configContainer textarea.configCode,
 .CodeMirror {
-  -webkit-border-radius: 3px;
+  -webkit-border-radius: 5px;
   -webkit-background-clip: padding-box;
-  -moz-border-radius: 3px;
+  -moz-border-radius: 5px;
   -moz-background-clip: padding;
-  border-radius: 3px;
+  border-radius: 5px;
   background-clip: padding-box;
   border: 1px solid #ccc;
   font-size: 13.01px;

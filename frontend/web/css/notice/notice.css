@@ -47,7 +47,7 @@
 
 .content_input {
     border: 1px solid #dddddd;
-    border-radius: 4px;
+    border-radius: 5px;
     width: 360px;
     height: 42px;
     padding-left: 15px;
@@ -82,7 +82,7 @@
     width: 360px;
     height: 42px;
     border: 1px solid #dddddd;
-    border-radius: 4px;
+    border-radius: 5px;
     padding-left: 15px;
     font-size: 16px;
     color: #333;
@@ -105,17 +105,17 @@
     width: 124px;
     height: 36px;
     margin-right: 24px;
-    background: #0070ff;
-    border-radius: 4px;
+    background: #4155d0;
+    border-radius: 5px;
     font-size: 16px;
     color: #ffffff;
 }
 
 .btn_test {
-    border: 1px solid #0070ff;
-    border-radius: 4px;
+    border: 1px solid #4155d0;
+    border-radius: 5px;
     font-size: 16px;
-    color: #0070ff;
+    color: #4155d0;
     width: 124px;
     height: 36px;
 }

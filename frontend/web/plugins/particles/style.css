@@ -151,9 +151,9 @@ input {
     padding: 0 15px;
     background: #2d2d2d;
     background: rgba(255,255,255,.9);
-    -moz-border-radius: 6px;
-    -webkit-border-radius: 6px;
-    border-radius: 6px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
     border: 1px solid #3d3d3d;
     border: 1px solid rgba(255,255,255,.15);
     -moz-box-shadow: 0 2px 3px 0 rgba(0,0,0,.1) inset;
@@ -182,9 +182,9 @@ button {
     margin-top: 25px;
     padding: 0;
     background: rgba(6, 127, 228, 0.85);
-    -moz-border-radius: 6px;
-    -webkit-border-radius: 6px;
-    border-radius: 6px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
     border: 0;
     -moz-box-shadow: 0 15px 30px 0 rgba(255,255,255,.25) inset,0 2px 7px 0 rgba(0,0,0,.2);
     font-family: "Microsoft YaHei",Helvetica,Arial,sans-serif;

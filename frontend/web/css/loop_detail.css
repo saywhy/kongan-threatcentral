@@ -5,7 +5,7 @@
 .loop_detail_top {
   background: #ffffff;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
-  border-radius: 6px;
+  border-radius: 5px;
   min-height: 100px;
 }
 
@@ -13,7 +13,7 @@
   margin-top: 24px;
   background: #ffffff;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
-  border-radius: 6px;
+  border-radius: 5px;
   min-height: 100px;
 }
 

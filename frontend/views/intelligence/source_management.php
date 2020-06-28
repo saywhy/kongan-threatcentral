@@ -18,7 +18,7 @@ $this->title = '情报源管理';
     .item {
         background: #FFFFFF;
         box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.16);
-        border-radius: 8px;
+        border-radius: 5px;
         height: 208px;
         position: relative;
         padding: 15px 10px 10px 24px;
@@ -63,7 +63,7 @@ $this->title = '情报源管理';
     }
 
     .blue {
-        color: #0070FF;
+        color: #4155d0;
     }
 
     .item_info_title_name {
@@ -94,7 +94,7 @@ $this->title = '情报源管理';
 
     .alert_search_input {
         border: 1px solid #ECECEC;
-        border-radius: 4px;
+        border-radius: 5px;
         height: 42px;
         width: 210px;
         padding-left: 34px;
@@ -111,7 +111,7 @@ $this->title = '情报源管理';
 
     }
     .tgl-ios:checked + .tgl-btn{
-        background: #0070FF;
+        background: #4155d0;
     }
     .tgl-ios + .tgl-btn{
             width: 30px;

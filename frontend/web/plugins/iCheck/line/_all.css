@@ -11,9 +11,9 @@
     color: #fff;
     background: #000;
     border: none;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
     cursor: pointer;
 }
     .icheckbox_line .icheck_line-icon,
@@ -85,9 +85,9 @@
     color: #fff;
     background: #e56c69;
     border: none;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
     cursor: pointer;
 }
     .icheckbox_line-red .icheck_line-icon,
@@ -159,9 +159,9 @@
     color: #fff;
     background: #1b7e5a;
     border: none;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
     cursor: pointer;
 }
     .icheckbox_line-green .icheck_line-icon,
@@ -233,9 +233,9 @@
     color: #fff;
     background: #2489c5;
     border: none;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
     cursor: pointer;
 }
     .icheckbox_line-blue .icheck_line-icon,
@@ -307,9 +307,9 @@
     color: #fff;
     background: #9cc2cb;
     border: none;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
     cursor: pointer;
 }
     .icheckbox_line-aero .icheck_line-icon,
@@ -381,9 +381,9 @@
     color: #fff;
     background: #73716e;
     border: none;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
     cursor: pointer;
 }
     .icheckbox_line-grey .icheck_line-icon,
@@ -455,9 +455,9 @@
     color: #fff;
     background: #f70;
     border: none;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
     cursor: pointer;
 }
     .icheckbox_line-orange .icheck_line-icon,
@@ -529,9 +529,9 @@
     color: #fff;
     background: #FFC414;
     border: none;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
     cursor: pointer;
 }
     .icheckbox_line-yellow .icheck_line-icon,
@@ -603,9 +603,9 @@
     color: #fff;
     background: #a77a94;
     border: none;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
     cursor: pointer;
 }
     .icheckbox_line-pink .icheck_line-icon,
@@ -677,9 +677,9 @@
     color: #fff;
     background: #6a5a8c;
     border: none;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
     cursor: pointer;
 }
     .icheckbox_line-purple .icheck_line-icon,

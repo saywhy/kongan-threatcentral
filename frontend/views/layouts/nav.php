@@ -21,7 +21,7 @@
 .dropdown-menu{
     background: #FFFFFF;
 box-shadow: 0 6px 6px 0 rgba(0,0,0,0.16);
-border-radius: 4px;
+border-radius: 5px;
 width:200px;
 /* height:210px; */
     left: 50%;
@@ -50,16 +50,16 @@ line-height:38px;
 padding:0 24px;
 }
 .dropdown-menu>li>a:hover{
-background: #0070FF;
+background: #4155d0;
 color:#fff;
 padding:0 24px;
 }
 .dropdown-menu>.active>a, .dropdown-menu>.active>a:focus, .dropdown-menu>.active>a:hover {
-background: #0070FF;
+background: #4155d0;
 color: #fff;
 }
 .hover_li_title:hover{
-    background: #456196;
+    background: rgb(0, 95, 204);
 }
 .nav-pills>li.active>a {
 border-top-color:transparent;
@@ -68,7 +68,7 @@ border-top-color:transparent;
     border-top:none;
 }
  .skin-blue .main-header .navbar .nav > .active > a{
-     background: #456196;
+     background: rgb(0, 95, 204);
  }
 .nav-pills>li.active>a {
     font-weight: normal;
@@ -78,7 +78,7 @@ border-top-color:transparent;
 
 }
 .hover_li_title.active{
-background:#456196 !important;
+background:rgb(0, 95, 204)!important;
 }
 
 </style>
@@ -99,7 +99,7 @@ background:#456196 !important;
                 </li>
                 <li class="treeview <?=isActive(['/map.html'])?>"
                     ng-if="menu_list.index_BigScreen">
-                    <a href="<?=getPath('/map.html')?>">
+                    <a href="<?=getPath('/map.html')?>" target="_blank">
                         <span>可视化大屏</span>
                     </a>
                 </li>
@@ -213,7 +213,7 @@ background:#456196 !important;
             </ul>
         </li>
         <!-- 设置 -->
-        <li role="presentation" class="dropdown hover_li_title <?=isActive(['/seting/network', '/seting/systemnotice', '/seting/custom-information-search', '/seting/centralmanager', '/seting/user', '/seting/log', '/api/index'])?> " ng-if="menu_list.set">
+        <li role="presentation" class="dropdown hover_li_title <?=isActive(['/seting/network', '/seting/systemnotice', '/seting/custom-information-search', '/seting/centralmanager', '/seting/user', '/seting/log', '/api/index', '/offline-update/index'])?> " ng-if="menu_list.set">
             <a class="dropdown-toggle nav_li_a"  data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
                 aria-expanded="false">
                 <i class="fa fa-cog"></i>设置<span class="caret"></span>
@@ -255,6 +255,11 @@ background:#456196 !important;
                 <li class="treeview <?=isActive(['/api/index'])?>" ng-if="menu_list.api">
                     <a href="<?=getPath('/api/index')?>" >
                         <span>情报API</span>
+                    </a>
+                </li>
+                <li class="treeview <?=isActive(['/offline-update/index'])?>" >
+                    <a href="<?=getPath('/offline-update/index')?>" >
+                        <span>更新</span>
                     </a>
                 </li>
             </ul>

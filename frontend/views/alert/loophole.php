@@ -3,7 +3,7 @@ $this->title = '漏洞预警';
 ?>
 <style>
     .loophole_item {
-        border-radius: 3px;
+        border-radius: 5px;
         border: 1px solid #eee;
         height: 120px;
         margin: 20px 0;
@@ -58,7 +58,7 @@ $this->title = '漏洞预警';
         border-top: 2px solid #d2d6de;
         box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
         cursor: pointer;
-        border-radius: 3px;
+        border-radius: 5px;
         padding: 10px;
         height: 60px;
         background: #fff;
@@ -146,19 +146,19 @@ $this->title = '漏洞预警';
         z-index: 999;
         background: #fff;
         padding: 5px;
-        border-radius: 3px;
+        border-radius: 5px;
     }
 
     .li_hover {
         padding: 3px;
-        border-radius: 3px;
+        border-radius: 5px;
     }
 
     .li_hover:hover {
         cursor: pointer;
-        background-color: #0070FF;
+        background-color: #4155d0;
         color: #fff;
-        border-radius: 3px;
+        border-radius: 5px;
     }
 
     /* 漏洞 */
@@ -194,7 +194,7 @@ $this->title = '漏洞预警';
     .loop_item_content {
         background: #FFFFFF;
         box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12);
-        border-radius: 6px;
+        border-radius: 5px;
         height: 192px;
         padding: 24px 0;
     }
@@ -237,7 +237,7 @@ $this->title = '漏洞预警';
     .loop_table {
         min-height: 200px;
         background: #FFFFFF;
-        border-radius: 6px;
+        border-radius: 5px;
         margin: 48px 0;
     }
 
@@ -245,7 +245,7 @@ $this->title = '漏洞预警';
     .loop_table_box {
         /* margin: 0 48px; */
         background-color: #fff;
-        border-radius: 6px;
+        border-radius: 5px;
         padding-top: 46px;
     }
 
@@ -255,7 +255,7 @@ $this->title = '漏洞预警';
 
     .alert_search_input {
         border: 1px solid #ECECEC;
-        border-radius: 4px;
+        border-radius: 5px;
         height: 42px;
         width: 180px;
         padding-left: 34px;
@@ -271,12 +271,12 @@ $this->title = '漏洞预警';
     input:focus {
         outline: none;
         outline-offset: 0px;
-        border: 1px solid #0070FF;
+        border: 1px solid #4155d0;
     }
 
     .button_search {
-        background: #0070FF;
-        border-radius: 4px;
+        background: #4155d0;
+        border-radius: 5px;
         height: 42px;
         width: 124px;
         color: #fff;
@@ -284,11 +284,11 @@ $this->title = '漏洞预警';
     }
 
     .button_down {
-        border: 1px solid #0070FF;
-        border-radius: 4px;
+        border: 1px solid #4155d0;
+        border-radius: 5px;
         height: 42px;
         width: 124px;
-        color: #0070FF;
+        color: #4155d0;
     }
 
     button:focus {
@@ -313,20 +313,20 @@ $this->title = '漏洞预警';
     }
 
     .btn_look {
-        border-radius: 4px;
+        border-radius: 5px;
         width: 68px;
         height: 28px;
         line-height: 28px;
         font-size: 12px;
         color: #fff;
-        background: #64A8FF;
+        background: #4155d0;
         padding: 0;
         position: relative;
     }
 
     .btn_look_closed {
         background: #F2F2F2;
-        border-radius: 4px;
+        border-radius: 5px;
         font-size: 12px;
         width: 68px;
         height: 28px;
@@ -343,7 +343,7 @@ $this->title = '漏洞预警';
         width: 68px;
         background: #FFFFFF;
         box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.16);
-        border-radius: 4px;
+        border-radius: 5px;
         font-size: 12px;
         color: #333;
         left: -1px;
@@ -355,7 +355,7 @@ $this->title = '漏洞预警';
     }
 
     .td_li:hover {
-        background: #0070FF;
+        background: #4155d0;
         color: #fff;
         cursor: pointer;
     }
@@ -393,8 +393,8 @@ $this->title = '漏洞预警';
     .select_choose_type {
         width: 114px;
         height: 36px;
-        border-radius: 4px;
-        background-color: #64A8FF !important;
+        border-radius: 5px;
+        background-color: #4155d0 !important;
         color: #fff;
         border: none;
     }
@@ -402,7 +402,7 @@ $this->title = '漏洞预警';
     .select_choose_type_true {
         width: 114px;
         height: 36px;
-        border-radius: 4px;
+        border-radius: 5px;
         background-color: #F2F2F2 !important;
         color: #bbb;
         border: none;
@@ -414,7 +414,7 @@ $this->title = '漏洞预警';
     }
 
     .cel_btn {
-        border-radius: 4px;
+        border-radius: 5px;
         width: 104px;
         height: 36px;
         font-size: 16px;
@@ -422,12 +422,12 @@ $this->title = '漏洞预警';
         left: 48px;
         top: 50%;
         transform: translateY(-50%);
-        color: #0070FF;
-        border: 1px solid #0070FF;
+        color: #4155d0;
+        border: 1px solid #4155d0;
     }
 
     .cel_btn_true {
-        border-radius: 4px;
+        border-radius: 5px;
         width: 104px;
         height: 36px;
         font-size: 16px;
@@ -442,8 +442,8 @@ $this->title = '漏洞预警';
     .ok_btn {
         width: 104px;
         height: 36px;
-        background: #0070FF;
-        border-radius: 4px;
+        background: #4155d0;
+        border-radius: 5px;
         color: #fff;
         position: absolute;
         right: 36px;
@@ -456,7 +456,7 @@ $this->title = '漏洞预警';
         height: 36px;
         border: none;
         background: #F2F2F2;
-        border-radius: 4px;
+        border-radius: 5px;
         color: #BBBBBB;
         position: absolute;
         right: 36px;
@@ -473,9 +473,9 @@ $this->title = '漏洞预警';
         z-index: 3;
         color: #fff;
         cursor: default;
-        background: #0070FF;
-        border-radius: 4px;
-        border-color: #0070FF;
+        background: #4155d0;
+        border-radius: 5px;
+        border-color: #4155d0;
     }
 
     .search_icon_box {
@@ -500,19 +500,19 @@ $this->title = '漏洞预警';
         z-index: 999;
         background: #fff;
         padding: 5px;
-        border-radius: 3px;
+        border-radius: 5px;
     }
 
     .li_hover {
         padding: 3px;
-        border-radius: 3px;
+        border-radius: 5px;
     }
 
     .li_hover:hover {
         cursor: pointer;
-        background-color: #0070FF;
+        background-color: #4155d0;
         color: #fff;
-        border-radius: 3px;
+        border-radius: 5px;
     }
      td,
     th {

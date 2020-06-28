@@ -12,7 +12,7 @@ $this->title = '资产管理';
     }
 
     .input_radius {
-        border-radius: 3px;
+        border-radius: 5px;
     }
 
     .management_box_content {
@@ -41,19 +41,19 @@ $this->title = '资产管理';
         z-index: 999;
         background: #fff;
         padding: 5px;
-        border-radius: 3px;
+        border-radius: 5px;
     }
 
     .li_hover {
         padding: 3px;
-        border-radius: 3px;
+        border-radius: 5px;
     }
 
     .li_hover:hover {
         cursor: pointer;
-        background-color: #0070FF;
+        background-color: #4155d0;
         color: #fff;
-        border-radius: 3px;
+        border-radius: 5px;
     }
 
     /* 资产管理 */
@@ -64,7 +64,7 @@ $this->title = '资产管理';
     .Management_main {
         min-height: 200px;
         background: #FFFFFF;
-        border-radius: 6px;
+        border-radius: 5px;
         margin-bottom: 20px;
     }
 
@@ -86,7 +86,7 @@ $this->title = '资产管理';
 
     .input_box {
         border: 1px solid #ECECEC;
-        border-radius: 4px;
+        border-radius: 5px;
         width: 210px;
         height: 42px;
         margin-right: 16px;
@@ -110,8 +110,8 @@ $this->title = '资产管理';
     }
 
     .btn_search {
-        background: #0070FF;
-        border-radius: 4px;
+        background: #4155d0;
+        border-radius: 5px;
         color: #fff;
         height: 42px;
         width: 124px;
@@ -120,9 +120,9 @@ $this->title = '资产管理';
     }
 
     .btn_add {
-        border: 1px solid #0070FF;
-        border-radius: 4px;
-        color: #0070FF;
+        border: 1px solid #4155d0;
+        border-radius: 5px;
+        color: #4155d0;
         height: 42px;
         width: 124px;
         font-size: 16px;
@@ -150,7 +150,7 @@ $this->title = '资产管理';
     }
 
     .detail_bom_nav a:hover {
-        color: #409eff !important;
+        color: #4155d0 !important;
     }
 
     .detail_bom_nav>li>a:hover {
@@ -159,13 +159,13 @@ $this->title = '资产管理';
     }
 
     .detail_bom_nav>li.active>a {
-        color: #409eff !important;
+        color: #4155d0 !important;
         border: none !important;
     }
 
     .detail_bom_nav>li.active {
-        border-top: 3px solid #0070FF;
-        border-radius: 4px;
+        border-top: 3px solid #EEF6FF;
+        border-radius: 5px;
     }
 
     .domain_table tr:nth-child(odd) {
@@ -173,7 +173,7 @@ $this->title = '资产管理';
     }
 
     .domain_table tr:nth-child(even) {
-        background: #eef6ff;
+        background: #EEF6FF;
 
     }
 
@@ -199,7 +199,7 @@ $this->title = '资产管理';
         padding: 0 10px;
     }
     .btn_background{
-        background:#0070FF;
+        background:#4155d0;
         color: #fff;
     }
 </style>

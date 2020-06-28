@@ -92,6 +92,7 @@ function getPath($path)
   <link rel="stylesheet" href="/plugins/iCheck/minimal/_all.css">
 
   <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/webuploader.css">
   <link rel="stylesheet" href="/css/common.css">
   <link rel="stylesheet" href="/plugins/ztree/zTreeStyle.css">
    <!-- <link rel="stylesheet" href="/plugins/switch/bootstrap-switch.css"> -->
@@ -102,13 +103,13 @@ function getPath($path)
 
   <header class="main-header">
     <!-- Logo -->
-    <a href="/" class="logo" style="background-color: #374051;height:64px;text-align: right;padding: 0 8px;text-decoration:none;">
+    <a href="/" class="logo" style="background-color: #50a3e5;height:64px;text-align: right;padding: 0 8px;text-decoration:none;">
       <span class="logo-lg" style="line-height: 62px;text-align: center">
-          <img src="/images/hoohoolab-logo-black.png" style="height: 50px;text-align: left">
+          <img src="/images/kongan.png" style="height: 60px;text-align: left">
       <!-- <span style="color: #c4d0d9;font-weight: 500;">ThreatCentral</span> -->
         </span>
     </a>
-    <nav class="navbar navbar-static-top" style=" background-color: #374051; ">
+    <nav class="navbar navbar-static-top" style=" background-color: #50a3e5; ">
       <div class="navbar-custom-menu" style="float: left;  ">
         <ul class="nav navbar-nav">
           <?php include 'nav.php';?>
@@ -187,6 +188,9 @@ function getPath($path)
         <?php }?>
         <?php if (isActive(['/seting/log']) == 'active') {?>
         <li><a href="/seting/log"><i class="fa fa-cog"></i>设置</a></li>
+        <?php }?>
+        <?php if (isActive(['/offline-update/index']) == 'active') {?>
+        <li><a href="/offline-update/index"><i class="fa fa-cog"></i>设置</a></li>
         <?php }?>
 
 
@@ -282,6 +286,10 @@ function getPath($path)
 <script src="/plugins/angular-sanitize/angular-sanitize.min.js"></script>
 <script src="/plugins/ztree/jquery.ztree.all.js"></script>
 <script src="/plugins/ztree/jquery.ztree.exhide.js"></script>
+
+      <script src="/js/jquery.fileupload.js"></script>
+  <script src="/js/webuploader.js"></script>
+  <script src="/js/fcup.min.js"></script>
 
 <!-- <script src="/plugins/pdf/html2canvas.js"></script> -->
 <!-- <script src="/plugins/pdf/jspdf_debug.js"></script> -->

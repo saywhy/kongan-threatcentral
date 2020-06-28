@@ -48,7 +48,7 @@ $this->title = '情报聚合';
         /* height: 304px; */
         background: #FFFFFF;
         box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
-        border-radius: 6px;
+        border-radius: 5px;
     }
 
     .agent_top_title {
@@ -64,7 +64,7 @@ $this->title = '情报聚合';
     }
 
     .domain_table tr:nth-child(even) {
-        background: #eef6ff;
+        background: #EEF6FF;
 
     }
 
@@ -96,8 +96,8 @@ $this->title = '情报聚合';
     }
 
     .btn_look {
-        background: #64A8FF;
-        border-radius: 4px;
+        background: #4155d0;
+        border-radius: 5px;
         height: 28px;
         width: 82px;
         color: #fff;
@@ -138,7 +138,7 @@ $this->title = '情报聚合';
         height: 593px;
         background: #FFFFFF;
         box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
-        border-radius: 6px;
+        border-radius: 5px;
     }
 
     .agent_bom_title {

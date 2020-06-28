@@ -39,7 +39,7 @@
   width: 480px;
   height: 42px;
   border: 1px solid #bbbbbb;
-  border-radius: 4px;
+  border-radius: 5px;
   color: #333333;
   padding-left: 16px;
 }
@@ -64,16 +64,16 @@
 .save_btn {
   width: 104px;
   height: 36px;
-  background: #0070ff;
-  border-radius: 4px;
+  background: #4155d0;
+  border-radius: 5px;
   color: #fff;
 }
 
 .cancel_btn {
   width: 104px;
   height: 36px;
-  border: 1px solid #0070ff;
-  border-radius: 4px;
-  color: #0070ff;
+  border: 1px solid #4155d0;
+  border-radius: 5px;
+  color: #4155d0;
   margin-left: 24px;
 }

@@ -5,7 +5,7 @@
 .detail_box {
     background: #ffffff;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
-    border-radius: 6px;
+    border-radius: 5px;
     min-height: 200px;
 }
 

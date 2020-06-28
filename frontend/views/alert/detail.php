@@ -22,7 +22,7 @@ $this->title = '预警详情';
         width: 100%;
         background: #FFFFFF;
         box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
-        border-radius: 6px;
+        border-radius: 5px;
     }
 
     .detail_top_top {
@@ -49,8 +49,8 @@ $this->title = '预警详情';
     }
 
     .detail_top_top_right_btn {
-        background: #0070FF;
-        border-radius: 4px;
+        background: #4155d0;
+            border-radius: 5px;
         width: 124px;
         height: 42px;
         font-size: 14px;
@@ -96,7 +96,7 @@ $this->title = '预警详情';
         min-height: 200px;
         background: #FFFFFF;
         box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
-        border-radius: 6px;
+             border-radius: 5px;
     }
 
     .detail_bom_nav {
@@ -120,7 +120,7 @@ $this->title = '预警详情';
     }
 
     .detail_bom_nav a:hover {
-        color: #409eff !important;
+        color: #4155d0 !important;
     }
 
     .detail_bom_nav>li>a:hover {
@@ -131,7 +131,7 @@ $this->title = '预警详情';
     .detail_bom_nav>li.active>a:hover {}
 
     .detail_bom_nav>li.active>a {
-        color: #409eff !important;
+        color: #4155d0 !important;
         border: none !important;
     }
 
@@ -169,8 +169,8 @@ $this->title = '预警详情';
         line-height: 20px;
     }
        .detail_bom_nav>li.active{
-         border-top: 3px solid #0070FF;
-    border-radius: 4px;
+         border-top: 3px solid #EEF6FF;
+      border-radius: 5px;
     }
 
     .domain_table tr:nth-child(odd) {
@@ -178,7 +178,7 @@ $this->title = '预警详情';
     }
 
     .domain_table tr:nth-child(even) {
-        background: #eef6ff;
+        background: #EEF6FF;
 
     }
 
@@ -224,10 +224,10 @@ font-size: 16px;
 color: #666666;
     }
     .zeromodal-container{
-        border-radius: 6px;
+            border-radius: 5px;
     }
     .modal-title{
-    border-left: 3px solid #0070FF;
+    border-left: 3px solid #4155d0;
     padding-left: 6px;
     }
 

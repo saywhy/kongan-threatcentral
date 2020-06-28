@@ -40,7 +40,7 @@ code
 	background: #f3f3f3;
 	border: 1px solid #ddd;
 	padding: 1px 4px;
-	border-radius: 3px;
+	border-radius: 5px;
 }
 
 abbr
@@ -58,7 +58,7 @@ abbr
 	margin: 0 0 0 5px;
 	color: #fff;
 	float: right;
-	border-radius: 3px;
+	border-radius: 5px;
 }
 
 .new

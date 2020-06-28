@@ -449,7 +449,7 @@ myApp.controller("myCtrl", function($scope, $http, $filter, $sce) {
         backgroundColor: "rgba(255,255,255,1)",
         padding: [5, 10],
         textStyle: {
-          color: "#0070FF"
+          color: "#4155d0"
         },
         extraCssText: "box-shadow: 0 0 5px rgba(0,0,0,0.3)"
       },
@@ -462,7 +462,7 @@ myApp.controller("myCtrl", function($scope, $http, $filter, $sce) {
           dataBackground: {
             //数据阴影的样式。
             lineStyle: {
-              color: "#0070FF"
+              color: "#4155d0"
             }, //阴影的线条样式
             areaStyle: {
               color: new echarts.graphic.LinearGradient(
@@ -473,7 +473,7 @@ myApp.controller("myCtrl", function($scope, $http, $filter, $sce) {
                 [
                   {
                     offset: 0,
-                    color: "#0070FF"
+                    color: "#4155d0"
                   },
                   {
                     offset: 1,
@@ -570,7 +570,7 @@ myApp.controller("myCtrl", function($scope, $http, $filter, $sce) {
                 [
                   {
                     offset: 0,
-                    color: "#0070FF"
+                    color: "#4155d0"
                   },
                   {
                     offset: 1,
@@ -585,10 +585,10 @@ myApp.controller("myCtrl", function($scope, $http, $filter, $sce) {
           lineStyle: {
             normal: {
               width: 2,
-              color: "#0070FF"
+              color: "#4155d0"
             },
             itemStyle: {
-              color: "#0070FF"
+              color: "#4155d0"
             }
           },
           data: $scope.count_array

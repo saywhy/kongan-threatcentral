@@ -13,7 +13,7 @@ $this->title = '漏洞关联';
         outline: none;
         padding: 0;
         -webkit-appearance: none;
-        border-radius: 3px;
+        border-radius: 5px;
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
         height: 35px;
@@ -27,7 +27,7 @@ $this->title = '漏洞关联';
     .button_search {
         cursor: pointer;
         border: 0;
-        border-radius: 3px;
+        border-radius: 5px;
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
         background-color: #30a9f2;

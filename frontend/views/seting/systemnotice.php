@@ -24,7 +24,7 @@ $this->title = '威胁通知';
     }
 
     .item_input {
-        border-radius: 4px;
+        border-radius: 5px;
         max-width: 200px;
     }
 
@@ -36,12 +36,12 @@ $this->title = '威胁通知';
         left: 108px;
         top: 3px;
         resize: none;
-        border-radius: 3px;
+        border-radius: 5px;
     }
 
     .info_input {
         width: 120px;
-        border-radius: 3px;
+        border-radius: 5px;
         border: 1px solid #999;
         height: 30px;
     }

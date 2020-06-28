@@ -56,8 +56,8 @@ p {
 
 .apt_detail_mid_item {
   padding: 10px;
-  background: #eef6ff;
-  border-radius: 4px;
+  background: #4155d0;
+  border-radius: 5px;
   margin-bottom: 10px;
   width: 100%;
 }
@@ -98,7 +98,7 @@ p {
   height: 194px;
   background: #ffffff;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
-  border-radius: 8px;
+  border-radius: 5px;
   padding: 24px;
 }
 
@@ -131,7 +131,7 @@ p {
 .apt_detail_box_bom {
   background: #ffffff;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
-  border-radius: 8px;
+  border-radius: 5px;
   margin-top: 36px;
   min-height: 200px;
   padding: 24px 36px;
@@ -167,7 +167,7 @@ p {
   padding: 24px 36px;
   background: #ffffff;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
-  border-radius: 8px;
+  border-radius: 5px;
 }
 
 .apt_detail_mid_item_subvalue {
@@ -180,7 +180,7 @@ p {
 }
 
 .iocs_item_box {
-  background: #eef6ff;
+  background: #4155d0;
   font-size: 12px;
   color: #333333;
   padding: 10px;

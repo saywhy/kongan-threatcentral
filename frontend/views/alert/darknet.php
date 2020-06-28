@@ -6,7 +6,7 @@ $this->title = '暗网预警';
 ?>
 <style>
     .loophole_item {
-        border-radius: 3px;
+        border-radius: 5px;
         border: 1px solid #eee;
         height: 120px;
         margin: 20px 0;
@@ -61,7 +61,7 @@ $this->title = '暗网预警';
         border-top: 2px solid #d2d6de;
         box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
         cursor: pointer;
-        border-radius: 3px;
+        border-radius: 5px;
         padding: 10px;
         height: 60px;
         background: #fff;
@@ -151,7 +151,7 @@ $this->title = '暗网预警';
 
     .darknet_row {
         background: #FFFFFF;
-        border-radius: 6px;
+        border-radius: 5px;
         min-height: 200px;
     }
 
@@ -168,7 +168,7 @@ $this->title = '暗网预警';
 
     .search_input {
         border: 1px solid #ECECEC;
-        border-radius: 4px;
+        border-radius: 5px;
         height: 42px;
         width: 210px;
         padding-left: 34px;
@@ -185,7 +185,7 @@ $this->title = '暗网预警';
     input:focus {
         outline: none;
         outline-offset: 0px;
-        border: 1px solid #0070FF;
+        border: 1px solid #4155d0;
     }
 
     .search_icon {
@@ -202,8 +202,8 @@ $this->title = '暗网预警';
         height: 42px;
         width: 124px;
         margin-left: 36px;
-        background: #0070FF;
-        border-radius: 4px;
+        background: #4155d0;
+        border-radius: 5px;
         font-size: 16px;
         color: #FFFFFF
     }
@@ -243,9 +243,9 @@ $this->title = '暗网预警';
         z-index: 3;
         color: #fff;
         cursor: default;
-        background: #0070FF;
-        border-radius: 4px;
-        border-color: #0070FF;
+        background: #4155d0;
+        border-radius: 5px;
+        border-color: #4155d0;
     }
 
     .container_ul {
@@ -258,30 +258,30 @@ $this->title = '暗网预警';
         z-index: 999;
         background: #fff;
         padding: 5px;
-        border-radius: 3px;
+             border-radius: 5px;
     }
 
     .li_hover {
         padding: 3px;
-        border-radius: 3px;
+           border-radius: 5px;
     }
 
     .li_hover:hover {
         cursor: pointer;
-        background-color: #0070FF;
+        background-color: #4155d0;
         color: #fff;
-        border-radius: 3px;
+         border-radius: 5px;
     }
 
     .zeromodal-container {
-        border-radius: 8px;
+             border-radius: 5px;
         padding: 20px 36px;
     }
 
     .zeromodal-header span {
         font-size: 18px;
         color: #333333;
-        border-left: 3px solid #0070FF;
+        border-left: 3px solid #4155d0;
         padding-left: 5px;
     }
 
@@ -308,7 +308,7 @@ $this->title = '暗网预警';
     .mode_top_input {
         height: 32px;
         border: 1px solid #ECECEC;
-        border-radius: 4px;
+           border-radius: 5px;
         font-size: 14px;
         color: #333333;
         width: 363px;
@@ -318,7 +318,7 @@ $this->title = '暗网预警';
     .mode_mid_input {
         height: 32px;
         border: 1px solid #ECECEC;
-        border-radius: 4px;
+            border-radius: 5px;
         font-size: 14px;
         color: #333333;
         width: 160px;
@@ -331,8 +331,8 @@ $this->title = '暗网预警';
     }
 
     .model_btn_save {
-        background: #0070FF;
-        border-radius: 4px;
+        background: #4155d0;
+            border-radius: 5px;
         font-size: 16px;
         color: #FFFFFF;
         width: 124px;
@@ -342,10 +342,10 @@ $this->title = '暗网预警';
 
     .model_btn_cel {
         margin-left: 36px;
-        border: 1px solid #0070FF;
-        border-radius: 4px;
+        border: 1px solid #4155d0;
+           border-radius: 5px;
         font-size: 16px;
-        color: #0070FF;
+        color: #4155d0;
         width: 124px;
         height: 40px;
         line-height: 40px;

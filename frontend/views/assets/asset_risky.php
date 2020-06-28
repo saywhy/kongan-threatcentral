@@ -13,7 +13,7 @@ $this->title = '受影响资产';
         width: 33.3%;
         background-color:#FF5F5C;
         height: 100%;
-        border-radius: 2px;
+        border-radius: 5px;
     }
 
     .high_num {
@@ -36,7 +36,7 @@ $this->title = '受影响资产';
         width: 33.3%;
         background-color: #FEAA00;
         height: 100%;
-        border-radius: 2px;
+        border-radius: 5px;
     }
     .low_num {
         width: 33.3%;
@@ -50,7 +50,7 @@ $this->title = '受影响资产';
         width: 33.3%;
         background-color:#7ACE4C;
         height: 100%;
-        border-radius: 2px;
+        border-radius: 5px;
     }
 
     .risky_box {
@@ -66,7 +66,7 @@ $this->title = '受影响资产';
 
     .myAsset_box {
         background: #FFFFFF;
-        border-radius: 6px;
+        border-radius: 5px;
         min-height: 200px;
     }
 
@@ -86,7 +86,7 @@ $this->title = '受影响资产';
 
     .input_box {
         border: 1px solid #ECECEC;
-        border-radius: 4px;
+        border-radius: 5px;
         width: 210px;
         height: 42px;
         margin-right: 16px;
@@ -110,9 +110,9 @@ $this->title = '受影响资产';
     }
 
     .input_item_btn {
-        background: #0070FF;
+        background: #4155d0;
         font-size: 16px;
-        border-radius: 4px;
+        border-radius: 5px;
         width: 124px;
         height: 42px;
         color: #fff;
@@ -128,19 +128,19 @@ $this->title = '受影响资产';
         z-index: 999;
         background: #fff;
         padding: 5px;
-        border-radius: 3px;
+        border-radius: 5px;
     }
 
     .li_hover {
         padding: 3px;
-        border-radius: 3px;
+        border-radius: 5px;
     }
 
     .li_hover:hover {
         cursor: pointer;
-        background-color: #0070FF;
+        background-color: #EEF6FF;
         color: #fff;
-        border-radius: 3px;
+        border-radius: 5px;
     }
 
     .domain_table tr:nth-child(odd) {
@@ -148,7 +148,7 @@ $this->title = '受影响资产';
     }
 
     .domain_table tr:nth-child(even) {
-        background: #eef6ff;
+        background: #EEF6FF;
 
     }
 
@@ -196,7 +196,7 @@ $this->title = '受影响资产';
     }
     .input_demo{
   border: 1px solid #ECECEC;
-        border-radius: 4px;
+        border-radius: 5px;
         width: 210px;
         min-height: 42px;
         margin-right: 16px;

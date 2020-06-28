@@ -350,7 +350,7 @@ $this->title = '概览';
         line-height: 24px;
         font-size: 14px;
         color: #333;
-        background: #EEF6FF;
+        background: #4155d0;
         border-radius: 2px;
         text-overflow: ellipsis;
         overflow: hidden;
