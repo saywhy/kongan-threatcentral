@@ -27,7 +27,7 @@ $this->title = '情报查询';
     .detail_bom_nav>li>a {
         height: 56px;
         line-height: 56px !important;
-        font-size: 16px !important;
+        font-size: 14px !important;
         color: #333333;
         padding: 0 30px !important;
         border: 0;
@@ -136,7 +136,7 @@ $this->title = '情报查询';
         border-radius: 5px;
         width: 624px;
         height: 48px;
-        font-size: 14px;
+        font-size: 12px;
         color: #666;
         float: left;
     }

@@ -49,7 +49,7 @@ $this->title = '账号管理';
                     </table>
                     <!-- angularjs分页 -->
                     <div style="padding: 25px;">
-                        <span style="font-size: 14px;color: #BBBBBB;">共有
+                        <span style="font-size: 12px;color: #BBBBBB;">共有
                             <span ng-bind="user_pages.count"></span>条</span>
                         <ul class="pagination pagination-sm no-margin pull-right ng-cloak">
                             <li>
@@ -130,7 +130,7 @@ $this->title = '账号管理';
                         </tr>
                     </table>
                     <div style="padding: 25px;">
-                        <span style="font-size: 14px;color: #BBBBBB;">共有
+                        <span style="font-size: 12px;color: #BBBBBB;">共有
                             <span ng-bind="roleList.length"></span>条</span>
                     </div>
                 </div>

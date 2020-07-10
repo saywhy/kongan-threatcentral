@@ -28,7 +28,7 @@ $this->title = '资产信息';
     .detail_bom_nav>li>a {
         height: 56px;
         line-height: 56px !important;
-        font-size: 16px !important;
+        font-size: 14px !important;
         color: #333333;
         padding: 0 30px !important;
         border: 0;
@@ -49,7 +49,7 @@ $this->title = '资产信息';
     }
 
     .detail_bom_nav>li.active {
-        border-top: 3px solid #EEF6FF;
+        border-top: 3px solid #4155d0;
         border-radius: 5px;
     }
 
@@ -122,7 +122,7 @@ $this->title = '资产信息';
                 </table>
                 <!-- angularjs分页 -->
                 <div style="padding: 20px;min-height: 20px;">
-                    <em style="font-size: 14px;color: #BBBBBB;">共有
+                    <em style="font-size: 12px;color: #BBBBBB;">共有
                         <span>{{alerts_list_data.count}}</span>条</em>
                     <ul class="pagination pagination-sm no-margin pull-right ng-cloak">
 
@@ -202,7 +202,7 @@ $this->title = '资产信息';
                 </table>
                 <!-- angularjs分页 -->
                 <div style="padding: 20px;min-height: 20px;">
-                    <em style="font-size: 14px;color: #BBBBBB;">共有
+                    <em style="font-size: 12px;color: #BBBBBB;">共有
                         <span>{{loopholes_list_data.count}}</span>条</em>
                     <ul class="pagination pagination-sm no-margin pull-right ng-cloak">
                         <li>

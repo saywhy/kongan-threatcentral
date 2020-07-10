@@ -59,7 +59,7 @@ $this->title = '审计日志';
             </table>
             <!-- angularjs分页 -->
             <div style="padding: 25px;">
-                <span style="font-size: 14px;color: #BBBBBB;">共有
+                <span style="font-size: 12px;color: #BBBBBB;">共有
                     <span ng-bind="page_list.count"></span>条</span>
                 <!-- angularjs分页 -->
                 <ul class="pagination pagination-sm no-margin pull-right ng-cloak">

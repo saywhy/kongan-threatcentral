@@ -271,7 +271,7 @@ $this->title = '概览';
     }
 
     .box_title_text {
-        font-size: 16px;
+        font-size: 14px;
         color: #333;
      font-weight: bold
     }

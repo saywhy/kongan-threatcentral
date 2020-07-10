@@ -29,7 +29,7 @@ $this->title = '更新';
   }
 
   .update_title {
-    font-size: 16px;
+    font-size: 14px;
     color: #333333;
     font-weight: 500;
   }

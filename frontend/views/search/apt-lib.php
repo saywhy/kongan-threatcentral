@@ -28,7 +28,7 @@ $this->title = 'APT武器库';
                     src="/images/search/closed_i.png" alt="">
             </span>
             <span style="position: absolute;top: 50%; right: 10px;transform: translateY(-50%);">
-                <span style="margin-right: 15px; font-size: 14px;color: #BBBBBB;">
+                <span style="margin-right: 15px; font-size: 12px;color: #BBBBBB;">
                     <span>{{card_list.length}}</span>
                     条搜索结果</span>
                 <img src="/images/search/closed_o.png" ng-if="closed_search_if" ng-click="closed_search()" alt="">
@@ -132,12 +132,12 @@ $this->title = 'APT武器库';
                         <p class="card_info_title">{{item.name}}</p>
                         <div>
                             <p class="card_info_p">
-                                <span class="card_info_name">攻击来源：</span>
+                                <span class="card_info_name">攻击来源:</span>
                                 <span class="card_info_value"
                                     title="{{item.attack_source}}">{{item.attack_source}}</span>
                             </p>
                             <p class="card_info_p">
-                                <span class="card_info_name">攻击目标：</span>
+                                <span class="card_info_name">攻击目标:</span>
                                 <span class="card_info_value"
                                     title="{{item.attack_target}}">{{item.attack_target}}</span>
                             </p>

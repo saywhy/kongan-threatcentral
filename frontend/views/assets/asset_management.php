@@ -92,7 +92,7 @@ $this->title = '资产管理';
         margin-right: 16px;
         padding-left: 30px;
         padding-right: 5px;
-        font-size: 14px;
+        font-size: 12px;
         color: #333;
     }
 
@@ -115,7 +115,7 @@ $this->title = '资产管理';
         color: #fff;
         height: 42px;
         width: 124px;
-        font-size: 16px;
+        font-size: 14px;
         margin-left: 64px;
     }
 
@@ -125,7 +125,7 @@ $this->title = '资产管理';
         color: #4155d0;
         height: 42px;
         width: 124px;
-        font-size: 16px;
+        font-size: 14px;
         margin-left: 16px;
     }
 
@@ -143,7 +143,7 @@ $this->title = '资产管理';
     .detail_bom_nav>li>a {
         height: 56px;
         line-height: 56px !important;
-        font-size: 16px !important;
+        font-size: 14px !important;
         color: #333333;
         padding: 0 30px !important;
         border: 0;
@@ -164,7 +164,7 @@ $this->title = '资产管理';
     }
 
     .detail_bom_nav>li.active {
-        border-top: 3px solid #EEF6FF;
+        border-top: 3px solid #4155d0;
         border-radius: 5px;
     }
 
@@ -309,7 +309,7 @@ $this->title = '资产管理';
                         </tr>
                     </table>
                     <div style="border-top: 1px solid #f4f4f4;padding: 20px;">
-                        <em style="font-size: 14px;color: #BBBBBB;">共有<span ng-bind="domain_data.count"></span>条资产</em>
+                        <em style="font-size: 12px;color: #BBBBBB;">共有<span ng-bind="domain_data.count"></span>条资产</em>
                         <!-- angularjs分页 -->
                         <ul class="pagination pagination-sm no-margin pull-right ng-cloak">
                             <li><a href="javascript:void(0);" ng-click="domain_get(domain_data.pageNow-1)"
@@ -375,7 +375,7 @@ $this->title = '资产管理';
                         </tr>
                     </table>
                     <div style="border-top: 1px solid #f4f4f4;padding: 20px;">
-                        <em style="font-size: 14px;color: #BBBBBB;">共有<span ng-bind="host_data.count"></span>条资产</em>
+                        <em style="font-size: 12px;color: #BBBBBB;">共有<span ng-bind="host_data.count"></span>条资产</em>
                         <!-- angularjs分页 -->
                         <ul class="pagination pagination-sm no-margin pull-right ng-cloak">
                             <li><a href="javascript:void(0);" ng-click="host_get(host_data.pageNow-1)"

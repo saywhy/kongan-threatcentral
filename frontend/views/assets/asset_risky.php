@@ -92,7 +92,7 @@ $this->title = '受影响资产';
         margin-right: 16px;
         padding-left: 30px;
         padding-right: 5px;
-        font-size: 14px;
+        font-size: 12px;
         color: #333;
     }
 
@@ -111,7 +111,7 @@ $this->title = '受影响资产';
 
     .input_item_btn {
         background: #4155d0;
-        font-size: 16px;
+        font-size: 14px;
         border-radius: 5px;
         width: 124px;
         height: 42px;
@@ -138,7 +138,7 @@ $this->title = '受影响资产';
 
     .li_hover:hover {
         cursor: pointer;
-        background-color: #EEF6FF;
+        background-color: #4155d0;
         color: #fff;
         border-radius: 5px;
     }
@@ -285,7 +285,7 @@ $this->title = '受影响资产';
             </table>
             <!-- angularjs分页 -->
             <div style="padding: 20px;min-height: 20px;">
-                <em style="font-size: 14px;color: #BBBBBB;">共有
+                <em style="font-size: 12px;color: #BBBBBB;">共有
                     <span>{{risk_data.count}}</span>条</em>
                 <!-- <span ng-bind="pages.count">3</span>条</em> -->
                 <ul class="pagination pagination-sm no-margin pull-right ng-cloak">

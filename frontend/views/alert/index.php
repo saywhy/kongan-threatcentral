@@ -301,7 +301,7 @@ $this->title = '威胁预警';
     }
 
     .choose_text {
-        font-size: 14px;
+        font-size: 12px;
         color: #999999;
     }
 
@@ -331,7 +331,7 @@ $this->title = '威胁预警';
           border-radius: 5px;
     width: 104px;
     height: 36px;
-    font-size: 16px;
+    font-size: 14px;
     position: absolute;
     left: 48px;
     top: 50%;
@@ -343,7 +343,7 @@ border: 1px solid #4155d0;
           border-radius: 5px;
     width: 104px;
     height: 36px;
-    font-size: 16px;
+    font-size: 14px;
     position: absolute;
     left: 48px;
     top: 50%;
@@ -365,6 +365,7 @@ border: 1px solid #4155d0;
     .ok_btn_true {
            width: 104px;
     height: 36px;
+       font-size: 14px;
     border:none;
    background: #F2F2F2;
     border-radius: 5px;
@@ -426,7 +427,7 @@ border: 1px solid #4155d0;
         border-radius: 3px;
     }
     .alert_search_input::-webkit-input-placeholder{
-font-size: 14px;
+font-size: 12px;
 color: #BBBBBB;
 }
 </style>
@@ -541,7 +542,7 @@ color: #BBBBBB;
                 </tr>
             </table>
             <p>
-                <em style="font-size: 14px;padding-left:36px;color: #BBBBBB;">共有<span
+                <em style="font-size: 12px;padding-left:36px;color: #BBBBBB;">共有<span
                         ng-bind="pages.count"></span>条预警</em>
             </p>
             <div class="choose_box">

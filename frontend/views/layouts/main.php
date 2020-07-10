@@ -130,7 +130,7 @@ function getPath($path)
   <div class="content-wrapper" style="background: #F8F8F8;">
     <!-- Content Header (Page header) -->
     <section class="content-header" style="height: 72px;background-color: #fff;padding:0;">
-      <h1 style="font-size: 18px;color:#333;line-height:72px;padding-left:48px;">
+      <h1 style="font-size: 16px;color:#333;line-height:72px;padding-left:48px;">
         <?=$this->title?>
         <small></small>
       </h1>

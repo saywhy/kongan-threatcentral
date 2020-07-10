@@ -58,7 +58,7 @@ $this->title = '集中管理';
                 </tr>
             </table>
             <div style="padding: 25px;">
-                <span style="font-size: 14px;color: #BBBBBB;">共有
+                <span style="font-size: 12px;color: #BBBBBB;">共有
                     <span ng-bind="centralmanage_list.count"></span>条</span>
                 <ul class="pagination pagination-sm no-margin pull-right ng-cloak">
                     <li>

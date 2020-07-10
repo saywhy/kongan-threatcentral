@@ -74,7 +74,7 @@ $this->title = '情报源管理';
     }
 
     .item_info_title_value {
-        font-size: 14px;
+        font-size: 12px;
         color: #666666;
         line-height: 18px;
         margin-bottom: 25px;
@@ -83,7 +83,7 @@ $this->title = '情报源管理';
     .item_info_title_time,
     .item_info_title_res {
         margin-bottom: 5px;
-        font-size: 14px;
+        font-size: 12px;
         color: #999999;
         line-height: 18px;
     }

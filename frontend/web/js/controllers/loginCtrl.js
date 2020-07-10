@@ -1,6 +1,8 @@
 var myApp = angular.module("myApp", []);
 myApp.controller("loginCtrl", function ($scope, $http, $filter, $sce) {
     $scope.init = function () {
+        $scope.input_type = 'password'
+
         $scope.user = {
             username: "",
             password: "",
@@ -9,7 +11,8 @@ myApp.controller("loginCtrl", function ($scope, $http, $filter, $sce) {
         $scope.success_code = false;
         $scope.errorMessage = {
             username: "",
-            password: ""
+            password: "",
+            code: ''
         };
         setTimeout(function () {
             $scope.verCode();
@@ -41,6 +44,25 @@ myApp.controller("loginCtrl", function ($scope, $http, $filter, $sce) {
             }
         };
     };
+
+
+    $scope.change_type = function () {
+        switch ($scope.input_type) {
+            case 'text':
+                $scope.input_type = 'password'
+                break;
+            case 'password':
+                $scope.input_type = 'text'
+                break;
+
+            default:
+                break;
+        }
+
+    }
+
+
+
 
     $scope.verCode = function () {
         var nums = [
@@ -105,10 +127,10 @@ myApp.controller("loginCtrl", function ($scope, $http, $filter, $sce) {
         function drawCode(str) {
             var canvas = document.getElementById("verifyCanvas"); //获取HTML端画布
             var context = canvas.getContext("2d"); //获取画布2D上下文
-            context.fillStyle = "cornflowerblue"; //画布填充色
+            context.fillStyle = "#E4D3CB"; //画布填充色
             context.fillRect(0, 0, canvas.width, canvas.height); //清空画布
-            context.fillStyle = "white"; //设置字体颜色
-            context.font = "25px Arial"; //设置字体
+            context.fillStyle = "#6B88CF"; //设置字体颜色
+            context.font = "28px Arial"; //设置字体
             var rand = new Array();
             var x = new Array();
             var y = new Array();
@@ -142,8 +164,8 @@ myApp.controller("loginCtrl", function ($scope, $http, $filter, $sce) {
                 Math.floor(Math.random() * canvas.width),
                 Math.floor(Math.random() * canvas.height)
             ); //随机线的终点x坐标是画布宽度，y坐标是画布高度的随机数
-            context.lineWidth = 0.5; //随机线宽
-            context.strokeStyle = "rgba(50,50,50,0.3)"; //随机线描边属性
+            context.lineWidth = 0.8; //随机线宽
+            context.strokeStyle = "#6B88CF"; //随机线描边属性
             context.stroke(); //描边，即起点描到终点
         }
         // 随机点(所谓画点其实就是画1px像素的线，方法不再赘述)
@@ -171,22 +193,31 @@ myApp.controller("loginCtrl", function ($scope, $http, $filter, $sce) {
         function resetCode() {
             $("#verifyCanvas").remove();
             $("#code_img").before(
-                '<canvas width="134" height="42" id="verifyCanvas"></canvas>'
+                '<canvas width="168" height="54" " id="verifyCanvas"></canvas>'
             );
             verVal = drawCode();
         }
     };
     $scope.login_in = function () {
-        if ($scope.user.code != "") {
-            if ($scope.user.code.toUpperCase() != $scope.NumCode) {
-                $scope.errorMessage.code = "验证码输入不正确";
-                $scope.success_code = false;
-            } else {
-                $scope.success_code = true;
-            }
-        } else {
-            $scope.errorMessage.code = "请输入验证码";
+        if ($scope.user.username == '') {
+            $scope.errorMessage.username = "请输入用户名";
+            return false
         }
+        if ($scope.user.password == '') {
+            $scope.errorMessage.password = "请输入密码";
+            return false
+        }
+        if ($scope.user.code == '') {
+            $scope.errorMessage.code = "请输入验证码";
+            return false
+        }
+        if ($scope.user.code.toUpperCase() != $scope.NumCode) {
+            $scope.errorMessage.code = "验证码输入不正确";
+            $scope.success_code = false;
+        } else {
+            $scope.success_code = true;
+        }
+
 
         if ($scope.success_code) {
             $http({

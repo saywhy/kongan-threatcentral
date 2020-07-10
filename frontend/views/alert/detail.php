@@ -2,237 +2,244 @@
 /* @var $this yii\web\View */
 
 $this->title = '预警详情';
-?>
-<style>
-    .detail_content {
-        padding: 36px 48px;
-    }
 
-    .row,
-    .col-md-3,
-    .col-md-4,
-    .col-md-6,
-    p {
-        padding: 0;
-        margin: 0;
-    }
+?><style>
+  .detail_content {
+    padding: 36px 48px;
+  }
 
-    .detail_top {
-        height: 184px;
-        width: 100%;
-        background: #FFFFFF;
-        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
-        border-radius: 5px;
-    }
+  .row,
+  .col-md-3,
+  .col-md-4,
+  .col-md-6,
+  p {
+    padding: 0;
+    margin: 0;
+  }
 
-    .detail_top_top {
-        height: 67px;
-        border-bottom: 1px solid #ECECEC;
-        padding: 0 24px;
-        position: relative;
-    }
+  .detail_top {
+    height: 184px;
+    width: 100%;
+    background: #FFFFFF;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+    border-radius: 5px;
+  }
 
-    .detail_top_top_left {
-        float: left;
-        height: 67px;
-        line-height: 67px;
-    }
+  .detail_top_top {
+    height: 67px;
+    border-bottom: 1px solid #ECECEC;
+    padding: 0 24px;
+    position: relative;
+  }
 
-    .detail_top_top_left_title {
-        font-size: 20px;
-        color: #333333;
-        vertical-align: middle;
-    }
+  .detail_top_top_left {
+    float: left;
+    height: 67px;
+    line-height: 67px;
+  }
 
-    .detail_top_top_right {
-        height: 67px;
-    }
+  .detail_top_top_left_title {
+    font-size: 14px;
+    color: #333333;
+    vertical-align: middle;
+  }
 
-    .detail_top_top_right_btn {
-        background: #4155d0;
-            border-radius: 5px;
-        width: 124px;
-        height: 42px;
-        font-size: 14px;
-        color: #fff;
-        position: absolute;
-        right: 26px;
-        top: 50%;
-        transform: translateY(-50%);
-    }
+  .detail_top_top_right {
+    height: 67px;
+  }
 
-    .detail_top_bom {
-        padding: 0 26px;
-        height: 116px;
-    }
+  .detail_top_top_right_btn {
+    background: #4155d0;
+    border-radius: 5px;
+    width: 124px;
+    height: 42px;
+    font-size: 14px;
+    color: #fff;
+    position: absolute;
+    right: 26px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 
-    .detail_top_bom_item {
-        height: 116px;
-    }
+  .detail_top_bom {
+    padding: 0 26px;
+    height: 116px;
+  }
 
-    .detail_top_bom_p {
-        height: 58px;
-        line-height: 58px;
-         white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
+  .detail_top_bom_item {
+    height: 116px;
+  }
 
-    .detail_top_bom_title {
-        font-size: 16px;
-        color: #649EE9;
-        line-height: 20px;
-        vertical-align: middle;
-    }
+  .detail_top_bom_p {
+    height: 58px;
+    line-height: 58px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 
-    .detail_top_bom_content {
-        font-size: 16px;
-        color: #333333;
-        vertical-align: middle;
-    }
+  .detail_top_bom_title {
+    font-size: 12px;
+    color: #649EE9;
+    line-height: 20px;
+    vertical-align: middle;
+  }
 
-    .detail_bom {
-        margin-top: 36px;
-        min-height: 200px;
-        background: #FFFFFF;
-        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
-             border-radius: 5px;
-    }
+  .detail_top_bom_content {
+    font-size: 12px;
+    color: #333333;
+    vertical-align: middle;
+  }
 
-    .detail_bom_nav {
-        height: 56px;
-        background: #EEF6FF;
-        border: none;
-    }
+  .detail_bom {
+    margin-top: 36px;
+    min-height: 200px;
+    background: #FFFFFF;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+    border-radius: 5px;
+  }
 
-    .detail_bom_nav li {
-        height: 56px;
+  .detail_bom_nav {
+    height: 56px;
+    background: #EEF6FF;
+    border: none;
+  }
 
-    }
+  .detail_bom_nav li {
+    height: 56px;
 
-    .detail_bom_nav>li>a {
-        height: 56px;
-        line-height: 56px !important;
-        font-size: 16px !important;
-        color: #333333;
-        padding: 0 30px !important;
-        border: 0;
-    }
+  }
 
-    .detail_bom_nav a:hover {
-        color: #4155d0 !important;
-    }
+  .detail_bom_nav>li>a {
+    height: 56px;
+    line-height: 56px !important;
+    font-size: 14px !important;
+    color: #333333;
+    padding: 0 30px !important;
+    border: 0;
+  }
 
-    .detail_bom_nav>li>a:hover {
-        border: none;
-        background: transparent;
-    }
+  .detail_bom_nav a:hover {
+    color: #4155d0 !important;
+  }
 
-    .detail_bom_nav>li.active>a:hover {}
+  .detail_bom_nav>li>a:hover {
+    border: none;
+    background: transparent;
+  }
 
-    .detail_bom_nav>li.active>a {
-        color: #4155d0 !important;
-        border: none !important;
-    }
+  .detail_bom_nav>li.active>a:hover {}
 
-    .detail_bom_ul,
-    .detail_bom_ul>li {
-        list-style: none;
-        padding: 0px;
-        margin: 0px;
-    }
+  .detail_bom_nav>li.active>a {
+    color: #4155d0 !important;
+    border: none !important;
+  }
 
-    .detail_bom_ul>li:nth-child(odd) {
-        background: #fff;
-        height: 48px;
-        padding: 0 26px;
-        line-height: 48px;
-    }
+  .detail_bom_ul,
+  .detail_bom_ul>li {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+  }
 
-    .detail_bom_ul>li:nth-child(even) {
-        background: #EEF6FF;
-        height: 48px;
-        line-height: 48px;
-        padding: 0 26px;
-    }
+  .detail_bom_ul>li:nth-child(odd) {
+    background: #fff;
+    height: 48px;
+    padding: 0 26px;
+    line-height: 48px;
+  }
 
-    .detail_bom_li_title {
-        font-size: 16px;
-        color: #333333;
-        width: 150px;
-        display: inline-block;
-    }
+  .detail_bom_ul>li:nth-child(even) {
+    background: #EEF6FF;
+    height: 48px;
+    line-height: 48px;
+    padding: 0 26px;
+  }
 
-    .detail_bom_li_content {
-        font-size: 14px;
-        color: #666666;
-        line-height: 20px;
-    }
-       .detail_bom_nav>li.active{
-         border-top: 3px solid #EEF6FF;
-      border-radius: 5px;
-    }
+  .detail_bom_li_title {
+    font-size: 12px;
+    color: #333333;
+    width: 150px;
+    display: inline-block;
+  }
 
-    .domain_table tr:nth-child(odd) {
-        background: #fff;
-    }
+  .detail_bom_li_content {
+    font-size: 12px;
+    color: #666666;
+    line-height: 20px;
+  }
 
-    .domain_table tr:nth-child(even) {
-        background: #EEF6FF;
+  .detail_bom_nav>li.active {
+    border-top: 3px solid #4155d0;
+    border-radius: 5px;
+  }
 
-    }
+  .domain_table tr:nth-child(odd) {
+    background: #fff;
+  }
 
-    .domain_table {
-        width: 100%;
-        table-layout: fixed;
-    }
+  .domain_table tr:nth-child(even) {
+    background: #EEF6FF;
 
-    .domain_table tr {
-        height: 48px;
-        line-height: 48px;
-        padding-left: 26px;
-    }
+  }
 
-    .domain_table td,
-    .domain_table th {
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        text-align: center;
-    }
-    .domain_p{
-            height: 48px;
+  .domain_table {
+    width: 100%;
+    table-layout: fixed;
+  }
+
+  .domain_table tr {
+    height: 48px;
+    line-height: 48px;
+    padding-left: 26px;
+  }
+
+  .domain_table td,
+  .domain_table th {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: center;
+  }
+
+  .domain_p {
+    height: 48px;
     line-height: 48px;
     padding-left: 26px;
     font-size: 16px;
-color: #333333;
-    }
-    .title_info_box{
-        line-height:50px;
-    }
-      .title_info_box p{
-          overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-    }
-    .title_info_title{
-        font-size: 16px;
-color: #333333;
-    }
-    .title_info_content{
-font-size: 16px;
-color: #666666;
-    }
-    .zeromodal-container{
-            border-radius: 5px;
-    }
-    .modal-title{
+    color: #333333;
+  }
+
+  .title_info_box {
+    line-height: 50px;
+  }
+
+  .title_info_box p {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .title_info_title {
+    font-size: 16px;
+    color: #333333;
+  }
+
+  .title_info_content {
+    font-size: 16px;
+    color: #666666;
+  }
+
+  .zeromodal-container {
+    border-radius: 5px;
+  }
+
+  .modal-title {
     border-left: 3px solid #4155d0;
     padding-left: 6px;
-    }
-
+  }
 </style>
-<section class="detail_content" ng-app="myApp" ng-controller="myCtrl" ng-cloak>
+<section class="detail_content" ng-app="myApp" ng-controller="myCtrl" style="margin-bottom: 40px;" ng-cloak>
     <div class="detail_top">
         <!-- 上 -->
         <div class="detail_top_top">
@@ -241,12 +248,9 @@ color: #666666;
                 <img src="/images/alert/top_detail.png" style="cursor:pointer;" ng-click="detail_title()" alt="">
             </div>
             <div class="detail_top_top_right">
-
-		<button class="detail_top_top_right_btn" ng-if="set_true&&lookup_license"
-                    ng-click="search_extend(detail.indicator)">
+                <button class="detail_top_top_right_btn" ng-click="search_extend(detail.indicator)">
                     扩展查询
                 </button>
-
             </div>
         </div>
         <!-- 下 -->
@@ -267,7 +271,8 @@ color: #666666;
                 <p class="detail_top_bom_p">
                     <img src="/images/alert/top_3.png" alt="">
                     <span class="detail_top_bom_title">情报来源:</span>
-                    <span class="detail_top_bom_content"title="{{detail.attr.sources[0]}}" >{{detail.attr.sources[0]}}</span>
+                    <span class="detail_top_bom_content"
+                        title="{{detail.attr.sources[0]}}">{{detail.attr.sources[0]}}</span>
                 </p>
                 <p class="detail_top_bom_p">
                     <img src="/images/alert/top_4.png" alt="">
@@ -357,10 +362,10 @@ color: #666666;
                 </ul>
             </div>
             <div id="domain" class="tab-pane">
-               <p class="domain_p">{{detail.attr.hoohoolab_domains}} </p>
+                <p class="domain_p">{{detail.attr.hoohoolab_domains}} </p>
             </div>
             <div id="file" class="tab-pane">
-                <table class="table ng-cloak domain_table">
+                <table class="table ng-cloak table_th domain_table">
                     <tr style="font-size: 16px;color: #333;">
                         <th style="font-weight: normal;">THREAT</th>
                         <th style="font-weight: normal;">MD5</th>
@@ -382,14 +387,15 @@ color: #666666;
     <div style="display: none;" id="title_hideenBox">
         <div id="title_info">
             <div class="row">
-                <div class="col-md-6 title_info_box" >
-                    <p >
+                <div class="col-md-6 title_info_box">
+                    <p>
                         <span class="title_info_title">资产分组：</span>
                         <span class="title_info_content">{{alert.company}}</span>
                     </p>
-                    <p >
-                         <span class="title_info_title">关联域名：</span>
-                        <span class="title_info_content" title="{{detail.attr.hoohoolab_domains}}">{{detail.attr.hoohoolab_domains}}</span>
+                    <p>
+                        <span class="title_info_title">关联域名：</span>
+                        <span class="title_info_content"
+                            title="{{detail.attr.hoohoolab_domains}}">{{detail.attr.hoohoolab_domains}}</span>
                     </p>
                 </div>
                 <div class="col-md-6 title_info_box">
@@ -398,7 +404,7 @@ color: #666666;
                         <span class="title_info_content">{{alert.asset_status}}</span>
                     </p>
                     <p>
-                         <span class="title_info_title">地理位置：</span>
+                        <span class="title_info_title">地理位置：</span>
                         <span class="title_info_content">{{alert.position}}</span>
                     </p>
                 </div>
@@ -455,52 +461,6 @@ color: #666666;
 
     var app = angular.module('myApp', ['ngSanitize']);
     app.controller('myCtrl', function ($scope, $http, $filter) {
-
-	$scope.set_true = false
-        $scope.lookup_license = false
-        //   获取状态设备角色
-        $scope.get_centralmanage_self = function () {
-            var loading = zeroModal.loading(4);
-            $http({
-                method: "get",
-                url: "/site/dev-self"
-            }).then(
-                function successCallback(data) {
-                    zeroModal.close(loading);
-                    $scope.centralmanage_self = data.data.data;
-                    if ($scope.centralmanage_self.role_type == "manage") {
-                        $scope.set_true = true;
-                    }
-                    if ($scope.centralmanage_self.role_type == "branch") {
-                        $scope.set_true = false;
-                    }
-                },
-                function errorCallback(data) {
-                    zeroModal.close(loading);
-                    zeroModal.error(data.data.message);
-                }
-            );
-        };
-
-        //   获取license
-        $scope.get_lookup_license = function () {
-            $http({
-                method: "get",
-                url: "/intelligence/license"
-            }).then(
-                function successCallback(data) {
-                    console.log(data);
-                    $scope.lookup_license = data.data.data.result;
-                },
-                function errorCallback(data) {}
-            );
-        };
-
-        $scope.get_centralmanage_self();
-        $scope.get_lookup_license();
-
-
-
         $scope.alert = alert;
         $scope.detail = alert.data;
         console.log($scope.detail);
@@ -665,44 +625,55 @@ color: #666666;
             });
         };
         //   扩展查询
-  $scope.search_extend = function(obj) {
-    console.log(obj);
-    var loading = zeroModal.loading(4);
-    $http({
-      method: "get",
-      url: "/intelligence/extension",
-      params: {
-        indicator: obj
-      }
-    }).then(
-      function(data) {
-        console.log(data.data.data.result);
-        zeroModal.close(loading);
-        for (var k in data.data.data.result) {
-          switch (k) {
-            case "DomainGeneralInfo":
-            //   window.location.href = "/ExtendedQuery.html#/domain?name=" + obj;
-            window.open("/ExtendedQuery.html#/domain?name=" + obj)
-              break;
-            case "FileGeneralInfo":
-            //   window.location.href = "/ExtendedQuery.html#/hash?name=" + obj;
-                window.open("/ExtendedQuery.html#/hash?name=" + obj)
-              break;
-            case "IpGeneralInfo":
-            //   window.location.href = "/ExtendedQuery.html#/ip?name=" + obj;
-                window.open("/ExtendedQuery.html#/ip?name=" + obj)
-              break;
-            case "UrlGeneralInfo":
-            //   window.location.href = "/ExtendedQuery.html#/url?name=" + obj;
-               window.open("/ExtendedQuery.html#/url?name=" + obj)
-              break;
-            default:
-              break;
-          }
-        }
-      },
-      function() {}
-    );
-  };
+        $scope.search_extend = function (obj) {
+            console.log(obj);
+            var loading = zeroModal.loading(4);
+            $http({
+                method: "get",
+                url: "/intelligence/extension",
+                params: {
+                    indicator: obj
+                }
+            }).then(
+                function (data) {
+                    zeroModal.close(loading);
+                    if (data.data.data == null) {
+                        zeroModal.error("没有查询到扩展信息");
+                        return false;
+                    }
+                    if (data.data.data.result == null) {
+                        zeroModal.error("没有查询到扩展信息");
+                        return false;
+                    }
+                    for (var k in data.data.data.result) {
+                        switch (k) {
+                            case "DomainGeneralInfo":
+                                sessionStorage . setItem("DomainGeneralInfo", JSON . stringify(data.data.data));
+                                //   window.location.href = "/ExtendedQuery.html#/domain?name=" + obj;
+                                window.open("/ExtendedQuery.html#/domain?name=" + obj)
+                                break;
+                            case "FileGeneralInfo":
+                             sessionStorage . setItem("FileGeneralInfo", JSON . stringify(data.data.data));
+                                //   window.location.href = "/ExtendedQuery.html#/hash?name=" + obj;
+                                window.open("/ExtendedQuery.html#/hash?name=" + obj)
+                                break;
+                            case "IpGeneralInfo":
+                                 sessionStorage . setItem("IpGeneralInfo", JSON . stringify(data.data.data));
+                                //   window.location.href = "/ExtendedQuery.html#/ip?name=" + obj;
+                                window.open("/ExtendedQuery.html#/ip?name=" + obj)
+                                break;
+                            case "UrlGeneralInfo":
+                               sessionStorage . setItem("UrlGeneralInfo", JSON . stringify(data.data.data));
+                                //   window.location.href = "/ExtendedQuery.html#/url?name=" + obj;
+                                window.open("/ExtendedQuery.html#/url?name=" + obj)
+                                break;
+                            default:
+                                break;
+                        }
+                    }
+                },
+                function () {}
+            );
+        };
     });
 </script>

@@ -32,7 +32,7 @@
 .role_box_item_title {
   display: inline-block;
   width: 100px;
-  font-size: 16px;
+  font-size: 14px;
   color: #333333;
   font-weight: 500;
   vertical-align: top;
@@ -83,14 +83,14 @@
   width: 480px;
   padding: 15px;
   line-height: 20px;
-  font-size: 16px;
+  font-size: 12px;
   color: #333333;
 }
 
 .ztree * {
   padding: 0;
   margin: 0;
-  font-size: 16px;
+  font-size: 12px;
   font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
 }
 

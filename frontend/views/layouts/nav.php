@@ -5,6 +5,9 @@
     #navApp{
         height: 64px;
     }
+    #navApp a{
+    font-size:14px;
+}
     .dropdown{
         height:64px;
     }
@@ -13,23 +16,23 @@
     height: 64px;
     border: 0;
     line-height: 64px;
-    padding: 0 20px !important;
-}
-#navApp a{
-    font-size:16px;
+    width:120px;
+    text-align: center;
+    padding: 0 !important;
 }
 .dropdown-menu{
     background: #FFFFFF;
 box-shadow: 0 6px 6px 0 rgba(0,0,0,0.16);
 border-radius: 5px;
-width:200px;
-/* height:210px; */
-    left: 50%;
-    transform: translateX(-50%);
+text-align: center;
+  width:120px;
+    left: 0;
+    /* left: 50%;
+    transform: translateX(-50%); */
     margin:0;
     font-size: 16px;
 color: #333333;
-padding-top:21px;
+padding-top:10px;
 }
 .skin-blue .main-header .navbar .nav > li > a:hover, .skin-blue .main-header .navbar .nav > li > a:active, .skin-blue .main-header .navbar .nav > li > a:focus, .skin-blue .main-header .navbar .nav .open > a, .skin-blue .main-header .navbar .nav .open > a:hover, .skin-blue .main-header .navbar .nav .open > a:focus, .skin-blue .main-header .navbar .nav > .active > a {
     background: transparent;

@@ -75,7 +75,7 @@ $this->title = '情报API';
                 </tr>
             </table>
             <div style="padding: 25px;">
-                <span style="font-size: 14px;color: #BBBBBB;">共有
+                <span style="font-size: 12px;color: #BBBBBB;">共有
                     <span ng-bind="api_list.count"></span>条</span>
                 <ul class="pagination pagination-sm no-margin pull-right ng-cloak">
                     <li>
