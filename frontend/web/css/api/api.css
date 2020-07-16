@@ -46,7 +46,7 @@
 
 .api_box_mid_input {
   padding-left: 36px;
-  font-size: 14px;
+  font-size: 12px;
   color: #333;
   border: 1px solid #D1D1D1;
   border-radius: 5px;
@@ -217,7 +217,7 @@ th {
 :-ms-input-placeholder {
   /* Internet Explorer 10-11 */
   font-size: 12px;
-  color: #BBBBBB;
+  color: #999;
 }
 
 .start_time_icon {

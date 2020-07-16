@@ -442,12 +442,12 @@ color: #BBBBBB;
                 <input type="text" class="alert_search_input" ng-focus="get_client_ip_focus()"
                     ng-blur="get_client_ip_blur()" ng-keyup="myKeyup_client_ip(searchData.client_ip)"
                     placeholder="请输入受影响资产" ng-model="searchData.client_ip">
-                <ul class="container_ul" ng-show="select_client_ip_if">
+                <!-- <ul class="container_ul" ng-show="select_client_ip_if">
                     <li ng-repeat="item in select_client_ip" class="li_hover"
                         ng-click="select_client_ip_item(item.client_ip)">
                         {{item.client_ip}}
                     </li>
-                </ul>
+                </ul> -->
             </span>
             <select class="alert_search_input" style="background-color: #fff;" ng-model="searchData.category"
                 ng-options="x.num as x.type for x in category_select"></select>
@@ -456,12 +456,12 @@ color: #BBBBBB;
                 <input type="text" class="alert_search_input" ng-focus="get_indicator_focus()"
                     ng-blur="get_indicator_blur()" ng-keyup="myKeyup_indicator(searchData.indicator)"
                     placeholder="请输入威胁指标" ng-model="searchData.indicator">
-                <ul class="container_ul" ng-show="select_indicator_if">
+                <!-- <ul class="container_ul" ng-show="select_indicator_if">
                     <li ng-repeat="item in select_indicator" class="li_hover"
                         ng-click="select_indicator_item(item.indicator)">
                         {{item.indicator}}
                     </li>
-                </ul>
+                </ul> -->
             </span>
             <select class="alert_search_input" style="background-color: #fff;" ng-model="searchData.company"
                 ng-options="x.num as x.type for x in company_select"></select>

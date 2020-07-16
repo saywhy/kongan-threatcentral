@@ -79,14 +79,14 @@ $this->title = '预警详情';
   }
 
   .detail_top_bom_title {
-    font-size: 12px;
-    color: #649EE9;
+    font-size: 14px;
+    color: #4155d0;
     line-height: 20px;
     vertical-align: middle;
   }
 
   .detail_top_bom_content {
-    font-size: 12px;
+    font-size: 14px;
     color: #333333;
     vertical-align: middle;
   }

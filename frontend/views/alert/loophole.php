@@ -580,12 +580,12 @@ $this->title = '漏洞预警';
                     <input type="text" class="alert_search_input" ng-focus="get_device_ip_focus()"
                         ng-blur="get_device_ip_blur();" ng-keyup="myKeyup_device_ip(loop_serch_data.device_ip)"
                         placeholder="请输入受影响资产" ng-model="loop_serch_data.device_ip">
-                    <ul class="container_ul" ng-show="select_device_ip_if" style="top:58px;">
+                    <!-- <ul class="container_ul" ng-show="select_device_ip_if" style="top:58px;">
                         <li ng-repeat="item in select_device_ip" class="li_hover"
                             ng-click="select_device_ip_item(item.device_ip)">
                             {{item.device_ip}}
                         </li>
-                    </ul>
+                    </ul> -->
                 </span>
                 <select class="alert_search_input" style="background-color: #fff;" ng-model="loop_serch_data.company"
                     ng-options="x.num as x.type for x in company_select_loophole"></select>
@@ -595,11 +595,11 @@ $this->title = '漏洞预警';
                         ng-blur="get_loophole_name_blur()"
                         ng-keyup="myKeyup_loophole_name(loop_serch_data.loophole_name)" placeholder="请输入受影响资产"
                         ng-model="loop_serch_data.loophole_name">
-                    <ul class="container_ul" ng-show="select_loophole_name_if" style="top:58px;">
+                    <!-- <ul class="container_ul" ng-show="select_loophole_name_if" style="top:58px;">
                         <li ng-repeat="item in select_loophole_name" class="li_hover"
                             ng-click="select_loophole_name_item(item.loophole_name)">
                             {{item.loophole_name}}
-                        </li>
+                        </li> -->
                     </ul>
                 </span>
                 <select class="alert_search_input" style="background-color: #fff;" ng-model="loop_serch_data.poc"
