@@ -5,7 +5,7 @@
         border: 0;
         line-height: 64px !important;
         padding: 0 70px !important;
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .vertic_align {

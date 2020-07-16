@@ -405,17 +405,17 @@ $this->title = '情报查询';
                         <span class="detail_bom_li_title">
                           首次发现时间
                         </span>
-                        <span class="detail_bom_li_content">{{reputation_res.first_seen|date : 'yyyy-MM-dd HH:mm' }}</span>
+                        <span class="detail_bom_li_content">{{reputation_res.hoohoolab_first_seen}}</span>
                       </li>
                       <li class="detail_bom_li" >
                         <img src="/images/alert/bom_6.png" alt="">
                         <span class="detail_bom_li_title">
                           最近发现时间
                         </span>
-                        <span class="detail_bom_li_content">{{reputation_res.last_seen|date : 'yyyy-MM-dd HH:mm'}}</span>
+                        <span class="detail_bom_li_content">{{reputation_res.hoohoolab_last_seen}}</span>
                       </li>
                       <li class="detail_bom_li" >
-                        <img src="/images/alert/bom_6.png" alt="">
+                        <img src="/images/alert/bom_9.png" width="18" height='18' alt="">
                         <span class="detail_bom_li_title">
                           行业
                         </span>
