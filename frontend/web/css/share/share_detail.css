@@ -17,7 +17,7 @@
 }
 
 .share_detail_container_top_title {
-  font-size: 20px;
+  font-size: 16px;
   color: #4155d0;
 }
 
@@ -36,13 +36,13 @@
 .share_detail_container_mid_title {
   height: 64px;
   line-height: 64px;
-  font-size: 16px;
+  font-size: 14px;
   color: #333333;
 }
 
 .share_detail_container_mid_des {
-  font-size: 14px;
-  color: #333333;
+  font-size: 12px;
+  color: #666;
 }
 
 .share_detail_container_bom_title {

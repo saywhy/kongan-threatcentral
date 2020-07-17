@@ -127,20 +127,20 @@ $this->title = '受影响资产';
         border: 1px solid #999;
         z-index: 999;
         background: #fff;
-        padding: 5px;
+   padding: 5px 0;
         border-radius: 5px;
     }
 
     .li_hover {
-        padding: 3px;
-        border-radius: 5px;
+         padding: 5px 10px;
+        /* border-radius: 5px; */
     }
 
     .li_hover:hover {
         cursor: pointer;
         background-color: #4155d0;
         color: #fff;
-        border-radius: 5px;
+        /* border-radius: 5px; */
     }
 
     .domain_table tr:nth-child(odd) {
