@@ -441,7 +441,7 @@ $this->title = '概览';
     height: 36px;
     border: 1px solid #d1d1d1;
     border-radius: 5px;
-    text-align: center;
+        padding-left: 25px;
     font-size: 12px;
     line-height: 36px;
     background: #fff;

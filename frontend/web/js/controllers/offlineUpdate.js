@@ -8,7 +8,6 @@ myApp.controller("offlineUpdateCtrl", function (
 ) {
     $scope.init = function () {
         $scope.get_list()
-        $scope.Repeat([1, 2, 3, 2, 1, 2, 3, 3, 4, 5, 5])
     }
     // 获取列表
     $scope.get_list = function () {
@@ -26,26 +25,7 @@ myApp.controller("offlineUpdateCtrl", function (
         });
     }
 
-    function Repeat(arr) {
-        var ary = arr;
-        var nary = ary;
-        var count = 0;
-        var obj = {};
-        for (var i = 0; i < ary.length; i++) {
-            for (var j = 0; j < nary.length; j++) {
-                if (ary[i] == nary[j]) {
-                    count += 1;
-                    obj[ary[i]] = count;
-                }
-            }
-            count = 0;
-        }
-        console.log(JSON.stringify(obj));
-        for (var k in obj) {
-            console.log(k + '出现了' + obj[k] + '次');
-        }
-        return obj;
-    }
+
     console.log(1112121);
     $(function () {
         var $list = $("#thelist"); //这几个初始化全局的百度文档上没说明，好蛋疼。
@@ -53,7 +33,7 @@ myApp.controller("offlineUpdateCtrl", function (
         var uploader = WebUploader.create({
             // 选完文件后，是否自动上传。
             auto: false,
-            chunkSize: 10 * 1024 * 1024,
+            chunkSize: 1 * 1024 * 1024,
             // swf文件路径
             swf: './webuploader-0.1.5/Uploader.swf',
             threads: 3, //上传并发数。允许同时最大上传进程数。
@@ -63,7 +43,7 @@ myApp.controller("offlineUpdateCtrl", function (
             pick: '#picker',
             // formData:{id:'11'}, //文件上传请求的参数表，每次发送都会发送此对象中的参数。
             chunked: true, //开启分片上传
-            threads: 3, //上传并发数
+            threads: 1, //上传并发数
             // fileNumLimit:1,//验证文件总数量, 超出则不允许加入队列。
             duplicate: true, //去重， 根据文件名字、文件大小和最后修改时间来生成hash Key.
             method: 'POST',
@@ -93,8 +73,21 @@ myApp.controller("offlineUpdateCtrl", function (
         //当文件上传成功时触发。接收返回值
         uploader.on('uploadSuccess', function (file, response) {
             console.log(response);
+            console.log(file);
             if (response.status == 'success') {
                 zeroModal.success('上传成功');
+                $http.post("/offline-update/update", {
+                    file_name: file.name
+                }).then(
+                    function success(rsp) {
+                        console.log(rsp);
+
+                        // if (rsp.data.status == "success") {
+
+                        // }
+                    },
+                    function err(rsp) {}
+                );
                 $scope.get_list()
                 $scope.$apply(function () {
                     $scope.upload = true; //开始上传按钮
@@ -158,24 +151,20 @@ myApp.controller("offlineUpdateCtrl", function (
             }
             // console.log($scope.filename);
 
-            if ($scope.filename.name.split('.')[1] != 'json') {
+            if ($scope.filename.name.split('.')[1] != 'zip') {
                 // sdk.tar.gz、df.tar.gz或reg.tar.gz
-                zeroModal.error('请上传.json格式的文件');
-            } else if ($scope.filename.name.split('.')[0] != 'BotnetCAndCURLsDF' &&
+                zeroModal.error('请上传.zip格式的文件');
+            } else if ($scope.filename.name.split('.')[0] != 'MobileMaliciousHashDF' &&
+                $scope.filename.name.split('.')[0] != 'MaliciousHashDF' &&
                 $scope.filename.name.split('.')[0] != 'IPReputationDF' &&
-                $scope.filename.name.split('.')[0] != 'MaliciousHashDF_MD5' &&
-                $scope.filename.name.split('.')[0] != 'MaliciousHashDF_SHA1' &&
-                $scope.filename.name.split('.')[0] != 'MaliciousHashDF_SHA256' &&
+                $scope.filename.name.split('.')[0] != 'PhishingURLsDF' &&
                 $scope.filename.name.split('.')[0] != 'MaliciousURLsDF' &&
-                $scope.filename.name.split('.')[0] != 'MobileMaliciousHashDF_MD5' &&
-                $scope.filename.name.split('.')[0] != 'MobileMaliciousHashDF_SHA1' &&
-                $scope.filename.name.split('.')[0] != 'MobileMaliciousHashDF_SHA256' &&
-                $scope.filename.name.split('.')[0] != 'PhishingURLsDF'
+                $scope.filename.name.split('.')[0] != 'BotnetCAndCURLsDF'
             ) {
                 zeroModal.show({
                     width: '600px',
                     height: '220px',
-                    content: '请上传文件名为BotnetCAndCURLsDF、IPReputationDF、MaliciousHashDF_MD5、MaliciousHashDF_MD5、MaliciousHashDF_SHA1、MaliciousHashDF_SHA256、MaliciousURLsDF、MobileMaliciousHashDF_MD5、MobileMaliciousHashDF_SHA1、MobileMaliciousHashDF_SHA256或PhishingURLsDF的文件',
+                    content: '请上传文件名为MobileMaliciousHashDF、MaliciousHashDF、IPReputationDF、PhishingURLsDF、MaliciousURLsDF或BotnetCAndCURLsDF的文件',
                     ok: true
                 });
             } else {
@@ -188,11 +177,6 @@ myApp.controller("offlineUpdateCtrl", function (
             console.log('选择文件');
             uploader.reset(); //重置uploader。目前只重置了队列。
         });
-
-
-
-
-
     });
 
     $scope.init()
