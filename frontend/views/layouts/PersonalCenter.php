@@ -9,6 +9,7 @@
     }
 
     .vertic_align {
+      margin-left:5px;
         vertical-align: middle;
     }
 
@@ -24,16 +25,18 @@
         <span><?=Yii::$app->user->identity->username?></span>
         <span class="caret"></span>
     </a>
-    <ul class="dropdown-menu" style="left: 95px;">
-        <li class="treeview" ng-click="resetPassword();">
+    <ul class="dropdown-menu" style="left: 50px;">
+        <li class="treeview" ng-click="resetPassword();"  ng-mouseover="mouseover_pswd()" ng-mouseleave="mouseleave_pswd()">
             <a >
-                <img src="/images/home/pswd.png" alt="">
+                <img src="/images/home/pswd.png" alt="" width="16" height="16" ng-if="!pswd_show">
+                <img src="/images/home/pswd_o.png" alt="" width="18" height="18" ng-if="pswd_show">
                 <span class="vertic_align">修改密码</span>
             </a>
         </li>
-        <li class="treeview">
+        <li class="treeview" ng-mouseover="mouseover_out()" ng-mouseleave="mouseleave_out()">
             <a href="/site/logout">
-                <img src="/images/home/out.png" alt="">
+                <img src="/images/home/out.png" width="16" height="16" alt="" ng-if="!out_show">
+                <img src="/images/home/out_o.png" width="18" height="18" alt="" ng-if="out_show">
                 <span class="vertic_align">退出登录</span>
             </a>
         </li>

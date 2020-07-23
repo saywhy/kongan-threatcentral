@@ -52,8 +52,8 @@ $this->title = 'APT武器库';
                 <div class="btn_more" ng-click="more_source(more_source_if)">
                     <img src="/images/apt/open.png" ng-if="more_source_if" class="img_open" alt="">
                     <img src="/images/apt/closed.png" ng-if="!more_source_if" class="img_open" alt="">
-                    <span ng-if="more_source_if">展开更多</span>
-                    <span ng-if="!more_source_if">收起更多</span>
+                    <span ng-if="more_source_if" class="text_middle">展开更多</span>
+                    <span ng-if="!more_source_if" class="text_middle">收起更多</span>
                 </div>
             </div>
              <div class="apt_search_list_item" ng-class="more_industry_if?'height30':'min_height'">
@@ -73,8 +73,8 @@ $this->title = 'APT武器库';
                 <div class="btn_more" ng-click="more_industry(more_industry_if)">
                     <img src="/images/apt/open.png" ng-if="more_industry_if" class="img_open" alt="">
                     <img src="/images/apt/closed.png" ng-if="!more_industry_if" class="img_open" alt="">
-                    <span ng-if="more_industry_if">展开更多</span>
-                    <span ng-if="!more_industry_if">收起更多</span>
+                    <span ng-if="more_industry_if" class="text_middle">展开更多</span>
+                    <span ng-if="!more_industry_if" class="text_middle">收起更多</span>
                 </div>
             </div>
              <div class="apt_search_list_item" ng-class="more_target_if?'height30':'min_height'">
@@ -94,8 +94,8 @@ $this->title = 'APT武器库';
                 <div class="btn_more" ng-click="more_target(more_target_if)">
                     <img src="/images/apt/open.png" ng-if="more_target_if" class="img_open" alt="">
                     <img src="/images/apt/closed.png" ng-if="!more_target_if" class="img_open" alt="">
-                    <span ng-if="more_target_if">展开更多</span>
-                    <span ng-if="!more_target_if">收起更多</span>
+                    <span ng-if="more_target_if" class="text_middle">展开更多</span>
+                    <span ng-if="!more_target_if" class="text_middle">收起更多</span>
                 </div>
             </div>
              <div class="apt_search_list_item" ng-class="more_motive_if?'height30':'min_height'">
@@ -115,8 +115,8 @@ $this->title = 'APT武器库';
                 <div class="btn_more" ng-click="more_motive(more_motive_if)">
                     <img src="/images/apt/open.png" ng-if="more_motive_if" class="img_open" alt="">
                     <img src="/images/apt/closed.png" ng-if="!more_motive_if" class="img_open" alt="">
-                    <span ng-if="more_motive_if">展开更多</span>
-                    <span ng-if="!more_motive_if">收起更多</span>
+                    <span ng-if="more_motive_if" class="text_middle">展开更多</span>
+                    <span ng-if="!more_motive_if" class="text_middle">收起更多</span>
                 </div>
             </div>
         </div>

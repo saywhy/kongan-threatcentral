@@ -31,7 +31,7 @@ $this->context->layout = false;
         <img class="logo_img" src="/images/kongan.png" alt="" width="200">
       </div>
       <div class="content">
-        <p class="login_title">鉴源安全感知系统</p>
+        <p class="login_title">工业控制系统安全威胁预警服务平台</p>
         <!-- 用户名 -->
         <div class="login_item_box">
           <input class="login_input" ng-focus="username_focus()" type="text" ng-model="user.username"
