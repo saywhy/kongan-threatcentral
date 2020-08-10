@@ -65,6 +65,7 @@ myApp.controller("offlineUpdateCtrl", function (
         // 当有文件被移除后触发
         uploader.on('fileDequeued', function (file) {
             console.log('del');
+            $('#' + file.id).hide()
         });
         //当uploader被重置时候触发
         uploader.on('reset', function (file) {
@@ -127,8 +128,6 @@ myApp.controller("offlineUpdateCtrl", function (
             $li.find('p.state').text('上传中');
             $percent.css('width', percentage * 100 + '%');
         });
-
-
         // 文件上传失败，显示上传出错。
         uploader.on('uploadError', function (file) {
             $('#' + file.id).find('p.state').text('上传出错');
@@ -149,29 +148,43 @@ myApp.controller("offlineUpdateCtrl", function (
                 // console.log('12121212121');
                 return false;
             }
-            // console.log($scope.filename);
+            console.log($scope.filename);
+            // 
+            var regexObj = /^(MobileMaliciousHashDF|MaliciousHashDF|IPReputationDF|PhishingURLsDF|MaliciousURLsDF|BotnetCAndCURLsDF)_[2-9][0-9]{3}(0[1-9]|1[0-2])(0[1-9]|[1-2][0-9]|3[0-1])_[0-9]{4}.zip$/;
 
-            if ($scope.filename.name.split('.')[1] != 'zip') {
-                // sdk.tar.gz、df.tar.gz或reg.tar.gz
-                zeroModal.error('请上传.zip格式的文件');
-            } else if ($scope.filename.name.split('.')[0] != 'MobileMaliciousHashDF' &&
-                $scope.filename.name.split('.')[0] != 'MaliciousHashDF' &&
-                $scope.filename.name.split('.')[0] != 'IPReputationDF' &&
-                $scope.filename.name.split('.')[0] != 'PhishingURLsDF' &&
-                $scope.filename.name.split('.')[0] != 'MaliciousURLsDF' &&
-                $scope.filename.name.split('.')[0] != 'BotnetCAndCURLsDF'
-            ) {
+            if (regexObj.test($scope.filename.name)) {
+                $scope.loading = zeroModal.loading(4);
+                uploader.upload($scope.filename);
+            } else {
+                uploader.removeFile($scope.filename);
                 zeroModal.show({
-                    width: '600px',
-                    height: '220px',
-                    content: '请上传文件名为MobileMaliciousHashDF、MaliciousHashDF、IPReputationDF、PhishingURLsDF、MaliciousURLsDF或BotnetCAndCURLsDF的文件',
+                    width: '400px',
+                    height: '250px',
+                    content: '<p>请上传文件名为“威胁情报类型+日期”的标准zip格式离线包。</p>' +
+                        '<p>MobileMaliciousHashDF</p>' +
+                        '<p>MaliciousHashDF</p>' +
+                        '<p>IPReputationDF</p>' +
+                        '<p>PhishingURLsDF</p>' +
+                        '<p>MaliciousURLsDF</p>' +
+                        '<p>BotnetCAndCURLsDF</p>',
                     ok: true
                 });
-            } else {
-                $scope.loading = zeroModal.loading(4);
-
-                uploader.upload($scope.filename);
             }
+
+            // if ($scope.filename.name.split('.')[1] != 'zip') {
+            //     // sdk.tar.gz、df.tar.gz或reg.tar.gz
+            //     zeroModal.error('请上传.zip格式的文件');
+            // } else if ($scope.filename.name.split('.')[0] != 'MobileMaliciousHashDF' &&
+            //     $scope.filename.name.split('.')[0] != 'MaliciousHashDF' &&
+            //     $scope.filename.name.split('.')[0] != 'IPReputationDF' &&
+            //     $scope.filename.name.split('.')[0] != 'PhishingURLsDF' &&
+            //     $scope.filename.name.split('.')[0] != 'MaliciousURLsDF' &&
+            //     $scope.filename.name.split('.')[0] != 'BotnetCAndCURLsDF'
+            // ) {
+
+            // } else {
+
+            // }
         });
         $('#picker').on('click', function () {
             console.log('选择文件');

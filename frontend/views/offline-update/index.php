@@ -141,7 +141,7 @@ $this->title = '更新';
   <div class="update_box">
     <p class="update_title">离线更新</p>
     <ul>
-      <li ng-repeat="item in list">{{item}}</li>
+      <li ng-repeat="item in list" style="font-size:14px;">{{item}}</li>
     </ul>
     <div class="update_file_box" style="margin-top:20px;">
       <div id="thelist" class="uploader-list"></div>
